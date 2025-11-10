@@ -1,0 +1,1486 @@
+/* ===== POOL PAGE STYLES ===== */
+.pool-hero {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.9)), url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+    position: relative;
+}
+
+.pool-hero .hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.pool-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+}
+
+.pool-hero p {
+    font-size: 1.3rem;
+    color: var(--light-color);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--secondary-color), #d35400);
+    color: var(--white);
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(230, 126, 34, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Pool Features Section */
+.pool-features {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.pool-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #f1f1f1;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-color), #2980b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.feature-list {
+    list-style: none;
+    text-align: left;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.feature-list i {
+    color: var(--success);
+    font-size: 0.9rem;
+}
+
+/* Pool Gallery Section */
+.pool-gallery {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.pool-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.pool-gallery .gallery-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 300px;
+}
+
+.pool-gallery .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pool-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.pool-gallery .gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.pool-gallery .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(44, 62, 80, 0.9));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.pool-gallery .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Pool Booking Section */
+.pool-booking {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.pool-booking-form {
+    background: var(--light-color);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pool-booking-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.pool-booking-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.pool-booking-form input,
+.pool-booking-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.pool-booking-form input:focus,
+.pool-booking-form select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Pool Rules Section */
+.pool-rules {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.rules-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.rule-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border-left: 4px solid var(--accent-color);
+}
+
+.rule-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.rule-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.rule-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.rule-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+/* ===== PARK PAGE STYLES ===== */
+.park-hero {
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.9), rgba(46, 204, 113, 0.9)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+    position: relative;
+}
+
+.park-hero .hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.park-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+}
+
+.park-hero p {
+    font-size: 1.3rem;
+    color: var(--light-color);
+    margin-bottom: 2rem;
+}
+
+/* Park Features Section */
+.park-features {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-item {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #f1f1f1;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--success);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--success), #27ae60);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Park Gallery Section */
+.park-gallery {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.park-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.park-gallery .gallery-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 300px;
+}
+
+.park-gallery .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.park-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.park-gallery .gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.park-gallery .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(39, 174, 96, 0.9));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.park-gallery .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Park Activities Section */
+.park-activities {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.activity-card {
+    background: var(--light-color);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--success);
+    background: var(--white);
+}
+
+.activity-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.activity-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.activity-time {
+    display: inline-block;
+    background: var(--success);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Park Rules Section */
+.park-rules {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.rules-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.rule-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid var(--success);
+    cursor: pointer;
+}
+
+.rule-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.rule-item i {
+    font-size: 2.5rem;
+    color: var(--success);
+    margin-bottom: 1rem;
+}
+
+.rule-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.rule-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+/* ===== KARTING PAGE STYLES ===== */
+.karting-hero {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.9), rgba(192, 57, 43, 0.9)), url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+    position: relative;
+}
+
+.karting-hero .hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.karting-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+}
+
+.karting-hero p {
+    font-size: 1.3rem;
+    color: var(--light-color);
+    margin-bottom: 2rem;
+}
+
+/* Track Info Section */
+.track-info {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.track-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #f1f1f1;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--error);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--error), #c0392b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Karting Gallery Section */
+.karting-gallery {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.karting-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.karting-gallery .gallery-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 300px;
+}
+
+.karting-gallery .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.karting-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.karting-gallery .gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.karting-gallery .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(231, 76, 60, 0.9));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.karting-gallery .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Karting Booking Section */
+.karting-booking {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.booking-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.booking-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 2px solid #f1f1f1;
+    position: relative;
+}
+
+.booking-card.featured {
+    border-color: var(--error);
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(231, 76, 60, 0.2);
+}
+
+.booking-card.featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--error);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.booking-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.booking-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.booking-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--error);
+    margin-bottom: 1.5rem;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.booking-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.booking-card ul li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.booking-card ul li:last-child {
+    border-bottom: none;
+}
+
+.booking-card ul li::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: bold;
+}
+
+/* Karting Rules Section */
+.karting-rules {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.rules-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.rule-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border-right: 4px solid var(--error);
+    cursor: pointer;
+}
+
+.rule-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.rule-item i {
+    font-size: 2.5rem;
+    color: var(--error);
+    margin-bottom: 1rem;
+}
+
+.rule-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.rule-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+/* ===== RESPONSIVE STYLES FOR FEATURE PAGES ===== */
+
+/* Large Devices (1200px and down) */
+@media screen and (max-width: 1200px) {
+    .pool-hero h1,
+    .park-hero h1,
+    .karting-hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .features-grid,
+    .pool-features-grid,
+    .facilities-grid,
+    .track-features {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .booking-options,
+    .membership-plans {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Medium Devices (992px and down) */
+@media screen and (max-width: 992px) {
+    .pool-hero,
+    .park-hero,
+    .karting-hero,
+    .gym-hero {
+        height: 60vh;
+        background-attachment: scroll;
+    }
+    
+    .pool-hero h1,
+    .park-hero h1,
+    .karting-hero h1,
+    .gym-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .pool-hero p,
+    .park-hero p,
+    .karting-hero p,
+    .gym-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Features Grid Adjustments */
+    .features-grid,
+    .pool-features-grid,
+    .facilities-grid,
+    .track-features,
+    .activities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Gallery Adjustments */
+    .pool-gallery .gallery-grid,
+    .park-gallery .gallery-grid,
+    .karting-gallery .gallery-grid,
+    .gym-gallery .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+    
+    /* Booking Forms */
+    .pool-booking-form,
+    .karting-booking-form {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .booking-options,
+    .membership-plans {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .booking-card.featured,
+    .plan-card.featured {
+        transform: none;
+        order: -1;
+    }
+    
+    .booking-card.featured:hover,
+    .plan-card.featured:hover {
+        transform: translateY(-10px);
+    }
+    
+    /* Rules Sections */
+    .rules-list,
+    .rules-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .rule-item {
+        padding: 1.5rem;
+    }
+    
+    /* Class Schedule Table */
+    .schedule-table {
+        overflow-x: auto;
+    }
+    
+    .schedule-table table {
+        min-width: 800px;
+    }
+}
+
+/* Small Devices (768px and down) */
+@media screen and (max-width: 768px) {
+    .pool-hero,
+    .park-hero,
+    .karting-hero,
+    .gym-hero {
+        height: 50vh;
+        margin-top: 60px;
+    }
+    
+    .pool-hero h1,
+    .park-hero h1,
+    .karting-hero h1,
+    .gym-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .pool-hero p,
+    .park-hero p,
+    .karting-hero p,
+    .gym-hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title p {
+        font-size: 1rem;
+    }
+    
+    /* Section Padding */
+    .pool-features,
+    .park-features,
+    .karting-features,
+    .gym-facilities,
+    .pool-gallery,
+    .park-gallery,
+    .karting-gallery,
+    .gym-gallery,
+    .pool-booking,
+    .karting-booking,
+    .gym-membership,
+    .park-activities,
+    .pool-rules,
+    .park-rules,
+    .karting-rules,
+    .class-schedule {
+        padding: 3rem 0;
+    }
+    
+    /* Features Grid - Single Column */
+    .features-grid,
+    .pool-features-grid,
+    .facilities-grid,
+    .track-features,
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Gallery - Single Column */
+    .pool-gallery .gallery-grid,
+    .park-gallery .gallery-grid,
+    .karting-gallery .gallery-grid,
+    .gym-gallery .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .pool-gallery .gallery-item,
+    .park-gallery .gallery-item,
+    .karting-gallery .gallery-item,
+    .gym-gallery .gallery-item {
+        height: 250px;
+    }
+    
+    /* Booking Cards */
+    .booking-card,
+    .plan-card {
+        padding: 1.5rem;
+    }
+    
+    .booking-card.featured::before,
+    .plan-card.featured::before {
+        font-size: 0.7rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .price {
+        font-size: 2.5rem;
+    }
+    
+    /* Rules - Single Column */
+    .rules-list,
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rule-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .rule-item i {
+        font-size: 2rem;
+    }
+    
+    /* Forms */
+    .pool-booking-form {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Extra Small Devices (576px and down) */
+@media screen and (max-width: 576px) {
+    .pool-hero,
+    .park-hero,
+    .karting-hero,
+    .gym-hero {
+        height: 45vh;
+        margin-top: 60px;
+    }
+    
+    .pool-hero h1,
+    .park-hero h1,
+    .karting-hero h1,
+    .gym-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .pool-hero p,
+    .park-hero p,
+    .karting-hero p,
+    .gym-hero p {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Section Titles */
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title p {
+        font-size: 0.9rem;
+    }
+    
+    /* Section Padding */
+    .pool-features,
+    .park-features,
+    .karting-features,
+    .gym-facilities,
+    .pool-gallery,
+    .park-gallery,
+    .karting-gallery,
+    .gym-gallery,
+    .pool-booking,
+    .karting-booking,
+    .gym-membership,
+    .park-activities,
+    .pool-rules,
+    .park-rules,
+    .karting-rules,
+    .class-schedule {
+        padding: 2rem 0;
+    }
+    
+    /* Cards and Items */
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card,
+    .booking-card,
+    .plan-card,
+    .rule-item {
+        padding: 1rem;
+    }
+    
+    .feature-card h3,
+    .feature-item h3,
+    .facility-card h3,
+    .activity-card h3,
+    .booking-card h3,
+    .plan-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Gallery Items */
+    .pool-gallery .gallery-item,
+    .park-gallery .gallery-item,
+    .karting-gallery .gallery-item,
+    .gym-gallery .gallery-item {
+        height: 200px;
+    }
+    
+    .gallery-overlay {
+        padding: 1rem;
+    }
+    
+    .view-image-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    /* Pricing */
+    .price {
+        font-size: 2rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Class Schedule */
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .schedule-table th {
+        font-size: 0.7rem;
+    }
+}
+
+/* Very Small Devices (400px and down) */
+@media screen and (max-width: 400px) {
+    .pool-hero h1,
+    .park-hero h1,
+    .karting-hero h1,
+    .gym-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .pool-hero p,
+    .park-hero p,
+    .karting-hero p,
+    .gym-hero p {
+        font-size: 0.85rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .feature-card h3,
+    .feature-item h3,
+    .facility-card h3,
+    .activity-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .pool-gallery .gallery-item,
+    .park-gallery .gallery-item,
+    .karting-gallery .gallery-item,
+    .gym-gallery .gallery-item {
+        height: 180px;
+    }
+    
+    .booking-card ul li,
+    .plan-card ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    .feature-card:hover,
+    .feature-item:hover,
+    .facility-card:hover,
+    .activity-card:hover,
+    .booking-card:hover,
+    .plan-card:hover,
+    .rule-item:hover,
+    .gallery-item:hover {
+        transform: none;
+    }
+    
+    .feature-card:active,
+    .feature-item:active,
+    .facility-card:active,
+    .activity-card:active {
+        transform: scale(0.98);
+    }
+    
+    .gallery-overlay {
+        opacity: 1;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .pool-hero,
+    .park-hero,
+    .karting-hero,
+    .gym-hero {
+        background: none !important;
+        color: black !important;
+        height: auto;
+    }
+    
+    .btn,
+    .gallery-overlay,
+    .view-image-btn {
+        display: none;
+    }
+    
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card,
+    .booking-card,
+    .plan-card,
+    .rule-item {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+    .pool-features,
+    .park-features,
+    .karting-features,
+    .gym-facilities,
+    .pool-booking,
+    .karting-booking,
+    .gym-membership {
+        background: #1a1a1a;
+    }
+    
+    .pool-gallery,
+    .park-gallery,
+    .karting-gallery,
+    .gym-gallery,
+    .pool-rules,
+    .park-rules,
+    .karting-rules,
+    .class-schedule {
+        background: #2d2d2d;
+    }
+    
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card,
+    .booking-card,
+    .plan-card,
+    .rule-item {
+        background: #333;
+        color: white;
+    }
+    
+    .feature-card h3,
+    .feature-item h3,
+    .facility-card h3,
+    .activity-card h3,
+    .booking-card h3,
+    .plan-card h3,
+    .rule-item h4 {
+        color: white;
+    }
+    
+    .feature-card p,
+    .feature-item p,
+    .facility-card p,
+    .activity-card p,
+    .rule-item p {
+        color: #ccc;
+    }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card,
+    .booking-card,
+    .plan-card,
+    .rule-item {
+        border: 2px solid black;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card,
+    .booking-card,
+    .plan-card,
+    .rule-item,
+    .gallery-item,
+    .btn {
+        transition: none;
+    }
+    
+    .gallery-item:hover img {
+        transform: none;
+    }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .pool-hero,
+    .park-hero,
+    .karting-hero,
+    .gym-hero {
+        height: 100vh;
+        min-height: 400px;
+    }
+    
+    .pool-hero h1,
+    .park-hero h1,
+    .karting-hero h1,
+    .gym-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .pool-hero p,
+    .park-hero p,
+    .karting-hero p,
+    .gym-hero p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .btn {
+        width: auto;
+    }
+}
+
+/* ===== FOLDABLE DEVICES ===== */
+@media screen and (max-width: 350px) {
+    .pool-hero h1,
+    .park-hero h1,
+    .karting-hero h1,
+    .gym-hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.4rem;
+    }
+    
+    .feature-card,
+    .feature-item,
+    .facility-card,
+    .activity-card {
+        padding: 0.8rem;
+    }
+    
+    .pool-gallery .gallery-item,
+    .park-gallery .gallery-item,
+    .karting-gallery .gallery-item,
+    .gym-gallery .gallery-item {
+        height: 150px;
+    }
+}

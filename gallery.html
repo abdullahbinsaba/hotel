@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ApexStay | Premium Hotel Experience</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>Apex<span>Stay</span></h2>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Features <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html" class="active">Side Park</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Gallery Hero Section -->
+        <section class="gallery-hero">
+            <div class="gallery-hero-content">
+                <h1>Our Gallery</h1>
+                <p>Explore the beauty and luxury of ApexStay through our visual journey</p>
+            </div>
+        </section>
+
+        <!-- Gallery Filter -->
+        <section class="gallery-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="rooms">Rooms & Suites</button>
+                    <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+                    <button class="filter-btn" data-filter="amenities">Amenities</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="surroundings">Surroundings</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-grid-section">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Rooms & Suites Images -->
+                    <div class="gallery-item rooms" data-category="rooms">
+                        <div class="gallery-image">
+                            <img src="./assets/images/luxcurios.jpeg" alt="Luxury Suite">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Luxury Suite</h3>
+                                    <p>Spacious suite with panoramic city views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item rooms" data-category="rooms">
+                        <div class="gallery-image">
+                            <img src="./assets/images/deluxe.jpeg" alt="Deluxe Room">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Deluxe Room</h3>
+                                    <p>Comfortable room with premium amenities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item rooms" data-category="rooms">
+                        <div class="gallery-image">
+                            <img src="./assets/images/standerd.jpeg" alt="Normal Room">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Normal Room</h3>
+                                    <p>Cozy and comfortable accommodation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Restaurant Images -->
+                    <div class="gallery-item restaurant" data-category="restaurant">
+                        <div class="gallery-image">
+                            <img src="./assets/images/resturent.jpeg" alt="Fine Dining">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Fine Dining</h3>
+                                    <p>Elegant restaurant atmosphere</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item restaurant" data-category="restaurant">
+                        <div class="gallery-image">
+                            <img src="./assets/images/outdoor.jpeg" alt="Outdoor Seating">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Outdoor Seating</h3>
+                                    <p>Al fresco dining experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item restaurant" data-category="restaurant">
+                        <div class="gallery-image">
+                            <img src="./assets/images/chef.jpeg" alt="Chef Special">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Chef Special</h3>
+                                    <p>Exquisite culinary creations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amenities Images -->
+                    <div class="gallery-item amenities" data-category="amenities">
+                        <div class="gallery-image">
+                            <img src="./assets/images/kart.jpeg" alt="Go-Karting Track">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Go-Karting Track</h3>
+                                    <p>Professional racing experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item amenities" data-category="amenities">
+                        <div class="gallery-image">
+                            <img src="./assets/images/pool.jpeg" alt="Infinity Pool">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Infinity Pool</h3>
+                                    <p>Stunning pool with city views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item amenities" data-category="amenities">
+                        <div class="gallery-image">
+                            <img src="./assets/images/gym.jpeg" alt="Modern Gym">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Modern Gym</h3>
+                                    <p>State-of-the-art fitness center</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item amenities" data-category="amenities">
+                        <div class="gallery-image">
+                            <img src="./assets/images/park.jpeg" alt="Side Park">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Side Park</h3>
+                                    <p>Beautiful green spaces for relaxation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Events Images -->
+                    <div class="gallery-item events" data-category="events">
+                        <div class="gallery-image">
+                            <img src="./assets/images/hall.jpeg" alt="Wedding Event">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Wedding Event</h3>
+                                    <p>Beautiful wedding celebrations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item events" data-category="events">
+                        <div class="gallery-image">
+                            <img src="./assets/images/conference.jpeg" alt="Conference">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Business Conference</h3>
+                                    <p>Professional meeting spaces</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Surroundings Images -->
+                    <div class="gallery-item surroundings" data-category="surroundings">
+                        <div class="gallery-image">
+                            <img src="./assets/images/city view.jpeg" alt="City View">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>City View</h3>
+                                    <p>Breathtaking cityscape</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item surroundings" data-category="surroundings">
+                        <div class="gallery-image">
+                            <img src="./assets/images/lobby.jpeg" alt="Hotel Lobby">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Grand Lobby</h3>
+                                    <p>Elegant entrance area</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item surroundings" data-category="surroundings">
+                        <div class="gallery-image">
+                            <img src="./assets/images/garden.jpeg" alt="Garden Area">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Garden Area</h3>
+                                    <p>Peaceful outdoor spaces</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Statistics Section -->
+        <section class="gallery-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-images"></i>
+                        <h3>500+</h3>
+                        <p>High-Quality Photos</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-video"></i>
+                        <h3>50+</h3>
+                        <p>Video Tours</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-eye"></i>
+                        <h3>10K+</h3>
+                        <p>Monthly Views</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-camera"></i>
+                        <h3>6</h3>
+                        <p>Photo Categories</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ApexStay</h3>
+                    <p>Your ultimate destination for luxury, comfort, and unforgettable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html">Side Park</a></li>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                        <p><i class="fas fa-envelope"></i> info@apexstay.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ApexStay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

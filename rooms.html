@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites - ApexStay | Premium Hotel Experience</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>Apex<span>Stay</span></h2>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="./rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="./restaurant.html" class="nav-link">Restaurant</a></li>
+                <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+                 <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Features <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./karting.html">Go-Karting</a></li>
+                        <li><a href="park.html">Side Park</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Rooms Hero Section -->
+        <section class="rooms-hero">
+            <div class="rooms-hero-content">
+                <h1>Rooms & Suites</h1>
+                <p>Discover our 300 luxurious rooms designed for ultimate comfort and relaxation</p>
+            </div>
+        </section>
+
+        <!-- Room Selection Section -->
+        <section class="room-selection">
+            <div class="container">
+                <div class="room-type-selector">
+                    <h2>Select Your Room Type</h2>
+                    <div class="room-buttons">
+                        <button class="room-type-btn active" data-room-type="normal">Standard Rooms (100)</button>
+                        <button class="room-type-btn" data-room-type="deluxe">Deluxe Rooms (100)</button>
+                        <button class="room-type-btn" data-room-type="luxury">Executive Suites (100)</button>
+                    </div>
+                </div>
+
+                <!-- Room Details Section (Dynamic Content) -->
+                <div class="room-details-container">
+                    <!-- Normal Room Details (Default) -->
+                    <div class="room-details active" id="normal-details">
+                        <div class="room-content">
+                            <div class="room-images">
+                                <div class="main-room-image">
+                                    <img src="./assets/images/standerd.jpeg" alt="Normal Room" id="normal-main-img">
+                                </div>
+                                <div class="room-thumbnails">
+                                    <img src="https://via.placeholder.com/100x80/3498db/FFFFFF?text=View+1" alt="Normal Room View 1" data-main-src="https://via.placeholder.com/600x400/3498db/FFFFFF?text=Normal+Room">
+                                    <img src="https://via.placeholder.com/100x80/2980b9/FFFFFF?text=View+2" alt="Normal Room View 2" data-main-src="https://via.placeholder.com/600x400/2980b9/FFFFFF?text=Normal+Bathroom">
+                                    <img src="https://via.placeholder.com/100x80/1f618d/FFFFFF?text=View+3" alt="Normal Room View 3" data-main-src="https://via.placeholder.com/600x400/1f618d/FFFFFF?text=Normal+Room+View">
+                                </div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Standard Room</h2>
+                                <p class="room-price">$99 <span>per night</span></p>
+                                <p class="room-description">Our comfortable Normal Rooms offer all the essential amenities for a pleasant stay. Perfect for business travelers and short visits.</p>
+                                
+                                <div class="room-features">
+                                    <h3>Room Features</h3>
+                                    <div class="features-grid">
+                                        <div class="feature">
+                                            <i class="fas fa-ruler-combined"></i>
+                                            <span>300 sq ft</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span>2 Guests</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-bed"></i>
+                                            <span>1 King Bed or 2 Twins</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-wifi"></i>
+                                            <span>Free WiFi</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-tv"></i>
+                                            <span>Smart TV</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-snowflake"></i>
+                                            <span>Air Conditioning</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-coffee"></i>
+                                            <span>Coffee Maker</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-shower"></i>
+                                            <span>Private Bathroom</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="availability-info">
+                                    <p><i class="fas fa-check-circle"></i> <strong>85</strong> rooms available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deluxe Room Details (Hidden by Default) -->
+                    <div class="room-details" id="deluxe-details">
+                        <div class="room-content">
+                            <div class="room-images">
+                                <div class="main-room-image">
+                                    <img src="./assets/images/deluxe.jpeg" alt="Deluxe Room" id="deluxe-main-img">
+                                </div>
+                                <div class="room-thumbnails">
+                                    <img src="https://via.placeholder.com/100x80/e74c3c/FFFFFF?text=View+1" alt="Deluxe Room View 1" data-main-src="https://via.placeholder.com/600x400/e74c3c/FFFFFF?text=Deluxe+Room">
+                                    <img src="https://via.placeholder.com/100x80/c0392b/FFFFFF?text=View+2" alt="Deluxe Room View 2" data-main-src="https://via.placeholder.com/600x400/c0392b/FFFFFF?text=Deluxe+Bathroom">
+                                    <img src="https://via.placeholder.com/100x80/a93226/FFFFFF?text=View+3" alt="Deluxe Room View 3" data-main-src="https://via.placeholder.com/600x400/a93226/FFFFFF?text=Deluxe+Room+View">
+                                </div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Deluxe Room</h2>
+                                <p class="room-price">$149 <span>per night</span></p>
+                                <p class="room-description">Spacious Deluxe Rooms with premium amenities and stunning city views. Ideal for couples and longer stays.</p>
+                                
+                                <div class="room-features">
+                                    <h3>Room Features</h3>
+                                    <div class="features-grid">
+                                        <div class="feature">
+                                            <i class="fas fa-ruler-combined"></i>
+                                            <span>450 sq ft</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span>3 Guests</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-bed"></i>
+                                            <span>1 King Bed + Sofa Bed</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-wifi"></i>
+                                            <span>Premium WiFi</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-tv"></i>
+                                            <span>55" Smart TV</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-snowflake"></i>
+                                            <span>Climate Control</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-wine-bottle"></i>
+                                            <span>Mini Bar</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-bath"></i>
+                                            <span>Rain Shower</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-umbrella-beach"></i>
+                                            <span>City View</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-robot"></i>
+                                            <span>Smart Room Control</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="availability-info">
+                                    <p><i class="fas fa-check-circle"></i> <strong>72</strong> rooms available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luxury Suite Details (Hidden by Default) -->
+                    <div class="room-details" id="luxury-details">
+                        <div class="room-content">
+                            <div class="room-images">
+                                <div class="main-room-image">
+                                    <img src="./assets/images/luxcurios.jpeg" alt="Luxury Suite" id="luxury-main-img">
+                                </div>
+                                <div class="room-thumbnails">
+                                    <img src="https://via.placeholder.com/100x80/f39c12/FFFFFF?text=View+1" alt="Luxury Suite View 1" data-main-src="https://via.placeholder.com/600x400/f39c12/FFFFFF?text=Luxury+Suite">
+                                    <img src="https://via.placeholder.com/100x80/e67e22/FFFFFF?text=View+2" alt="Luxury Suite View 2" data-main-src="https://via.placeholder.com/600x400/e67e22/FFFFFF?text=Luxury+Living+Area">
+                                    <img src="https://via.placeholder.com/100x80/d35400/FFFFFF?text=View+3" alt="Luxury Suite View 3" data-main-src="https://via.placeholder.com/600x400/d35400/FFFFFF?text=Luxury+Bathroom">
+                                </div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Executive Suite</h2>
+                                <p class="room-price">$299 <span>per night</span></p>
+                                <p class="room-description">Our premium Luxury Suites offer unparalleled comfort with separate living areas, premium amenities, and exclusive services.</p>
+                                
+                                <div class="room-features">
+                                    <h3>Suite Features</h3>
+                                    <div class="features-grid">
+                                        <div class="feature">
+                                            <i class="fas fa-ruler-combined"></i>
+                                            <span>800 sq ft</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span>4 Guests</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-bed"></i>
+                                            <span>King Bed + Living Area</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-wifi"></i>
+                                            <span>Ultra-Fast WiFi</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-tv"></i>
+                                            <span>65" 4K TV + Bedroom TV</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-hot-tub"></i>
+                                            <span>Jacuzzi Bath</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-cocktail"></i>
+                                            <span>Premium Mini Bar</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-umbrella-beach"></i>
+                                            <span>Panoramic City View</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-robot"></i>
+                                            <span>Full Smart Automation</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-concierge-bell"></i>
+                                            <span>Butler Service</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-car"></i>
+                                            <span>Private Check-in</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fas fa-gem"></i>
+                                            <span>Luxury Toiletries</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="availability-info">
+                                    <p><i class="fas fa-check-circle"></i> <strong>45</strong> suites available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="room-booking-section">
+            <div class="container">
+                <div class="booking-form-container">
+                    <h2>Book Your Room</h2>
+                    <form class="booking-form" id="room-booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="room-type">Room Type *</label>
+                                <select id="room-type" name="room-type" required>
+                                    <option value="">Select Room Type</option>
+                                    <option value="normal">Standard Room - $99/night</option>
+                                    <option value="deluxe">Deluxe Room - $149/night</option>
+                                    <option value="luxury">Executive Suite - $299/night</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room-quantity">Number of Rooms *</label>
+                                <select id="room-quantity" name="room-quantity" required>
+                                    <option value="1">1 Room</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                    <option value="4">4 Rooms</option>
+                                    <option value="5">5+ Rooms</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin">Check-In Date *</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Check-Out Date *</label>
+                                <input type="date" id="checkout" name="checkout" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adults">Adults *</label>
+                                <select id="adults" name="adults" required>
+                                    <option value="1">1 Adult</option>
+                                    <option value="2" selected>2 Adults</option>
+                                    <option value="3">3 Adults</option>
+                                    <option value="4">4 Adults</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="children">Children</label>
+                                <select id="children" name="children">
+                                    <option value="0">0 Children</option>
+                                    <option value="1">1 Child</option>
+                                    <option value="2">2 Children</option>
+                                    <option value="3">3 Children</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" name="special-requests" rows="3" placeholder="Any special requirements or preferences..."></textarea>
+                        </div>
+                        
+                        <div class="price-summary">
+                            <h3>Price Summary</h3>
+                            <div class="price-details">
+                                <div class="price-line">
+                                    <span>Room Rate:</span>
+                                    <span id="room-rate">$0</span>
+                                </div>
+                                <div class="price-line">
+                                    <span>Nights:</span>
+                                    <span id="nights-count">0</span>
+                                </div>
+                                <div class="price-line">
+                                    <span>Taxes & Fees:</span>
+                                    <span id="taxes-amount">$0</span>
+                                </div>
+                                <div class="price-line total">
+                                    <span>Total:</span>
+                                    <span id="total-amount">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="book-now-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ApexStay</h3>
+                    <p>Your ultimate destination for luxury, comfort, and unforgettable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html">Side Park</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                        <p><i class="fas fa-envelope"></i> info@apexstay.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ApexStay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Room Selection Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const roomButtons = document.querySelectorAll('.room-type-btn');
+            const roomDetails = document.querySelectorAll('.room-details');
+            const roomTypeSelect = document.getElementById('room-type');
+            
+            // Room type button click handler
+            roomButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const roomType = this.getAttribute('data-room-type');
+                    
+                    // Update active button
+                    roomButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding room details
+                    roomDetails.forEach(detail => {
+                        detail.classList.remove('active');
+                        if (detail.id === `${roomType}-details`) {
+                            detail.classList.add('active');
+                        }
+                    });
+                    
+                    // Update booking form room type
+                    roomTypeSelect.value = roomType;
+                    updatePriceSummary();
+                });
+            });
+            
+            // Thumbnail click handler for all rooms
+            document.querySelectorAll('.room-thumbnails img').forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    const mainSrc = this.getAttribute('data-main-src');
+                    const roomDetails = this.closest('.room-details');
+                    const mainImg = roomDetails.querySelector('.main-room-image img');
+                    mainImg.src = mainSrc;
+                });
+            });
+            
+            // Booking form change handlers
+            const checkinInput = document.getElementById('checkin');
+            const checkoutInput = document.getElementById('checkout');
+            const roomQuantity = document.getElementById('room-quantity');
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            checkinInput.min = today;
+            
+            // Update checkout min date when checkin changes
+            checkinInput.addEventListener('change', function() {
+                checkoutInput.min = this.value;
+                updatePriceSummary();
+            });
+            
+            checkoutInput.addEventListener('change', updatePriceSummary);
+            roomTypeSelect.addEventListener('change', updatePriceSummary);
+            roomQuantity.addEventListener('change', updatePriceSummary);
+            
+            // Initialize price summary
+            updatePriceSummary();
+            
+            function updatePriceSummary() {
+                const roomType = roomTypeSelect.value;
+                const quantity = parseInt(roomQuantity.value) || 1;
+                const checkin = new Date(checkinInput.value);
+                const checkout = new Date(checkoutInput.value);
+                
+                let roomRate = 0;
+                switch(roomType) {
+                    case 'normal': roomRate = 99; break;
+                    case 'deluxe': roomRate = 149; break;
+                    case 'luxury': roomRate = 299; break;
+                    default: roomRate = 0;
+                }
+                
+                let nights = 0;
+                if (checkin && checkout && checkout > checkin) {
+                    nights = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+                }
+                
+                const subtotal = roomRate * nights * quantity;
+                const taxes = subtotal * 0.12; // 12% tax
+                const total = subtotal + taxes;
+                
+                document.getElementById('room-rate').textContent = `$${roomRate * quantity}`;
+                document.getElementById('nights-count').textContent = nights;
+                document.getElementById('taxes-amount').textContent = `$${taxes.toFixed(2)}`;
+                document.getElementById('total-amount').textContent = `$${total.toFixed(2)}`;
+            }
+            
+            // Form submission
+            document.getElementById('room-booking-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your booking! We will contact you shortly to confirm your reservation.');
+                this.reset();
+                updatePriceSummary();
+            });
+        });
+    </script>
+</body>
+</html>

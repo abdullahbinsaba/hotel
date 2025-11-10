@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Park | ApexStay</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/feature.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>Apex<span>Stay</span></h2>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Features <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html" class="active">Side Park</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Park Hero Section -->
+    <section class="park-hero">
+        <div class="hero-content">
+            <h1>Tranquil Side Park</h1>
+            <p>Escape to our beautifully landscaped park with walking trails, gardens, and peaceful seating areas</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('park-features')">Explore Park</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('activities')">View Activities</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Park Features Section -->
+    <section id="park-features" class="park-features">
+        <div class="container">
+            <h2 class="section-title">Park Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Lush Gardens</h3>
+                    <p>Beautifully maintained gardens with seasonal flowers and native plants</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3>Walking Trails</h3>
+                    <p>Paved walking paths through scenic landscapes and water features</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bench"></i>
+                    </div>
+                    <h3>Seating Areas</h3>
+                    <p>Comfortable benches and seating areas throughout the park</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-fountain"></i>
+                    </div>
+                    <h3>Water Features</h3>
+                    <p>Soothing fountains and small ponds with aquatic life</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Park Gallery Section -->
+    <section class="park-gallery">
+        <div class="container">
+            <h2 class="section-title">Park Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/park1.jpg" alt="Park Gardens" data-highres="images/park1-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/park2.jpg" alt="Walking Trails" data-highres="images/park2-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/park3.jpg" alt="Water Features" data-highres="images/park3-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/park4.jpg" alt="Seating Areas" data-highres="images/park4-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="park-activities">
+        <div class="container">
+            <h2 class="section-title">Park Activities</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <h3>Morning Yoga</h3>
+                    <p>Join our daily yoga sessions in the peaceful park environment</p>
+                    <span class="activity-time">7:00 AM Daily</span>
+                </div>
+                <div class="activity-card">
+                    <h3>Bird Watching</h3>
+                    <p>Discover various bird species in their natural habitat</p>
+                    <span class="activity-time">All Day</span>
+                </div>
+                <div class="activity-card">
+                    <h3>Evening Strolls</h3>
+                    <p>Perfectly lit paths for relaxing evening walks</p>
+                    <span class="activity-time">5:00 PM - 9:00 PM</span>
+                </div>
+                <div class="activity-card">
+                    <h3>Photography</h3>
+                    <p>Capture stunning nature shots throughout the park</p>
+                    <span class="activity-time">All Day</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Park Rules Section -->
+    <section class="park-rules">
+        <div class="container">
+            <h2 class="section-title">Park Guidelines</h2>
+            <div class="rules-content">
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Opening Hours</h4>
+                        <p>6:00 AM to 10:00 PM daily</p>
+                    </div>
+                    <div class="rule-item">
+                        <i class="fas fa-dog"></i>
+                        <h4>Pets</h4>
+                        <p>Leashed pets welcome in designated areas</p>
+                    </div>
+                    <div class="rule-item">
+                        <i class="fas fa-camera"></i>
+                        <h4>Photography</h4>
+                        <p>Commercial photography requires prior permission</p>
+                    </div>
+                    <div class="rule-item">
+                        <i class="fas fa-recycle"></i>
+                        <h4>Cleanliness</h4>
+                        <p>Please use designated trash and recycling bins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ApexStay</h3>
+                    <p>Your ultimate destination for luxury, comfort, and unforgettable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html">Side Park</a></li>
+                        <li><a href="#">Spa & Wellness</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                        <p><i class="fas fa-envelope"></i> info@apexstay.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ApexStay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span id="close-lightbox" class="close-lightbox">&times;</span>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+            <button id="prev-image" class="lightbox-nav"><i class="fas fa-chevron-left"></i></button>
+            <button id="next-image" class="lightbox-nav"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="assests/js/script.js"></script>
+    <script src="assets/js/feature.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go-Karting | ApexStay</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/feature.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>Apex<span>Stay</span></h2>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Features <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html" class="active">Side Park</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Karting Hero Section -->
+    <section class="karting-hero">
+        <div class="hero-content">
+            <h1>Premium Go-Karting</h1>
+            <p>Experience the thrill of high-speed racing on our professional indoor karting track</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('track-info')">View Track</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('booking')">Book Session</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track Information Section -->
+    <section id="track-info" class="track-info">
+        <div class="container">
+            <h2 class="section-title">World-Class Karting Track</h2>
+            <div class="track-features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Professional Layout</h3>
+                    <p>400-meter track with challenging corners and straightaways</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>High-Speed Karts</h3>
+                    <p>Professional karts capable of reaching 60 km/h</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety First</h3>
+                    <p>Full safety gear and professional marshals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Race Events</h3>
+                    <p>Weekly competitions and corporate events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Karting Gallery Section -->
+    <section class="karting-gallery">
+        <div class="container">
+            <h2 class="section-title">Karting Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/karting1.jpg" alt="Karting Track" data-highres="images/karting1-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/karting2.jpg" alt="Racing Karts" data-highres="images/karting2-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/karting3.jpg" alt="Safety Gear" data-highres="images/karting3-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/karting4.jpg" alt="Race Events" data-highres="images/karting4-large.jpg">
+                    <div class="gallery-overlay">
+                        <button class="view-image-btn">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="karting-booking">
+        <div class="container">
+            <h2 class="section-title">Book Your Racing Experience</h2>
+            <div class="booking-options">
+                <div class="booking-card">
+                    <h3>Single Session</h3>
+                    <div class="price">$25</div>
+                    <ul>
+                        <li>15-minute session</li>
+                        <li>Safety briefing</li>
+                        <li>Full safety gear</li>
+                        <li>Lap time printout</li>
+                    </ul>
+                    <button class="btn btn-primary">Book Now</button>
+                </div>
+                <div class="booking-card featured">
+                    <h3>Double Session</h3>
+                    <div class="price">$45</div>
+                    <ul>
+                        <li>30 minutes total</li>
+                        <li>Safety briefing</li>
+                        <li>Full safety gear</li>
+                        <li>Lap time analysis</li>
+                        <li>Digital certificate</li>
+                    </ul>
+                    <button class="btn btn-primary">Book Now</button>
+                </div>
+                <div class="booking-card">
+                    <h3>Group Package</h3>
+                    <div class="price">$120</div>
+                    <ul>
+                        <li>6 people maximum</li>
+                        <li>60 minutes total</li>
+                        <li>Championship race</li>
+                        <li>Trophy for winner</li>
+                        <li>Group photos</li>
+                    </ul>
+                    <button class="btn btn-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Rules Section -->
+    <section class="karting-rules">
+        <div class="container">
+            <h2 class="section-title">Safety & Rules</h2>
+            <div class="rules-content">
+                <div class="rules-list">
+                    <div class="rule-item">
+                        <i class="fas fa-helmet-safety"></i>
+                        <h4>Safety Gear</h4>
+                        <p>Helmets and safety equipment must be worn at all times</p>
+                    </div>
+                    <div class="rule-item">
+                        <i class="fas fa-user-check"></i>
+                        <h4>Age Requirements</h4>
+                        <p>Minimum age 12 years. Under 16 requires parental consent</p>
+                    </div>
+                    <div class="rule-item">
+                        <i class="fas fa-shoe-prints"></i>
+                        <h4>Proper Footwear</h4>
+                        <p>Closed-toe shoes required. No sandals or high heels</p>
+                    </div>
+                    <div class="rule-item">
+                        <i class="fas fa-ban"></i>
+                        <h4>Restrictions</h4>
+                        <p>No alcohol consumption before driving. Maximum weight 120kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ApexStay</h3>
+                    <p>Your ultimate destination for luxury, comfort, and unforgettable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html">Side Park</a></li>
+                        <li><a href="#">Spa & Wellness</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                        <p><i class="fas fa-envelope"></i> info@apexstay.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ApexStay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span id="close-lightbox" class="close-lightbox">&times;</span>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+            <button id="prev-image" class="lightbox-nav"><i class="fas fa-chevron-left"></i></button>
+            <button id="next-image" class="lightbox-nav"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/feature.js"></script>
+</body>
+</html>

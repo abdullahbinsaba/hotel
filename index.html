@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexStay - Premium Hotel Experience</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>Apex<span>Stay</span></h2>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active">Features <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html" class="active">Side Park</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Banner/Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Welcome to ApexStay</h1>
+                <p>Experience Luxury, Adventure & Unforgettable Moments</p>
+                <a href="#rooms" class="cta-button">Book Your Stay</a>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-form">
+                    <h2>Find Your Perfect Stay</h2>
+                    <form class="booking-grid">
+                        <div class="form-group">
+                            <label for="checkin">Check-In Date</label>
+                            <input type="date" id="checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout">Check-Out Date</label>
+                            <input type="date" id="checkout" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Guests</label>
+                            <select id="guests" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5+">5+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="room-type">Room Type</label>
+                            <select id="room-type" required>
+                                <option value="standard">Standard Room</option>
+                                <option value="deluxe">Deluxe Room</option>
+                                <option value="suite">Executive Suite</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="book-now-btn">Check Availability</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms Preview Section -->
+        <section class="rooms-preview" id="rooms">
+            <div class="container">
+                <h2 class="section-title">Our Luxurious Rooms</h2>
+                <div class="rooms-grid">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="./assets/images/standerd.jpeg" alt="Standard Room">
+                        </div>
+                        <div class="room-info">
+                            <h3>Standard Room</h3>
+                            <p>Comfortable and cozy with all essential amenities</p>
+                            <div class="room-price">$99<span>/night</span></div>
+                            <a href="./rooms.html" class="view-details-btn">View Details</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="./assets/images/deluxe.jpeg" alt="Deluxe Room">
+                        </div>
+                        <div class="room-info">
+                            <h3>Deluxe Room</h3>
+                            <p>Spacious room with premium amenities and city view</p>
+                            <div class="room-price">$149<span>/night</span></div>
+                            <a href="./rooms.html" class="view-details-btn">View Details</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="./assets/images/luxcurios.jpeg" alt="Executive Suite">
+                        </div>
+                        <div class="room-info">
+                            <h3>Executive Suite</h3>
+                            <p>Luxurious suite with separate living area and balcony</p>
+                            <div class="room-price">$199<span>/night</span></div>
+                            <a href="./rooms.html" class="view-details-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About ApexStay</h2>
+                        <p>Welcome to ApexStay, where luxury meets adventure. We are committed to providing our guests with an unforgettable experience that combines world-class accommodation with exceptional amenities.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-karting"></i>
+                                <h4>Go-Karting Track</h4>
+                                <p>Experience thrilling moments at our professional karting track</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-dumbbell"></i>
+                                <h4>Modern Gym</h4>
+                                <p>State-of-the-art fitness center for your wellness journey</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-swimming-pool"></i>
+                                <h4>Infinity Pool</h4>
+                                <p>Relax and unwind in our stunning infinity pool</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tree"></i>
+                                <h4>Side Park</h4>
+                                <p>Beautiful green spaces for relaxation and outdoor activities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="./assets/images/lobby.jpeg"alt="ApexStay Lobby">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurant Preview Section -->
+        <section class="restaurant-preview" id="restaurant">
+            <div class="container">
+                <h2 class="section-title">Our Restaurant</h2>
+                <div class="restaurant-content">
+                    <div class="restaurant-image">
+                        <img src="./assets/images/resturent.jpeg" alt="Restaurant">
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>La Belle Cuisine</h3>
+                        <p>Experience culinary excellence at our award-winning restaurant. Our master chefs create exquisite dishes using the finest local ingredients.</p>
+                        
+                        <div class="restaurant-features">
+                            <div class="restaurant-feature">
+                                <i class="fas fa-utensils"></i>
+                                <span>International Cuisine</span>
+                            </div>
+                            <div class="restaurant-feature">
+                                <i class="fas fa-wine-glass-alt"></i>
+                                <span>Fine Wine Selection</span>
+                            </div>
+                            <div class="restaurant-feature">
+                                <i class="fas fa-sun"></i>
+                                <span>Outdoor Seating</span>
+                            </div>
+                            <div class="restaurant-feature">
+                                <i class="fas fa-music"></i>
+                                <span>Live Music</span>
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <a href="./resturent.html" class="view-menu-btn">View Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Pool Preview Section -->
+        <section class="pool-preview" id="pool">
+            <div class="container">
+                <h2 class="section-title">Luxury Pool</h2>
+                <div class="pool-content">
+                    <div class="pool-image">
+                        <img src="./assets/images/pool.jpeg" alt="Infinity Pool">
+                    </div>
+                    <div class="pool-info">
+                        <h3>Infinity Pool Experience</h3>
+                        <p>Relax and rejuvenate in our stunning temperature-controlled infinity pool with panoramic city views and premium amenities.</p>
+                        
+                        <div class="pool-features">
+                            <div class="pool-feature">
+                                <i class="fas fa-infinity"></i>
+                                <span>Infinity Design</span>
+                            </div>
+                            <div class="pool-feature">
+                                <i class="fas fa-temperature-high"></i>
+                                <span>Temperature Controlled</span>
+                            </div>
+                            <div class="pool-feature">
+                                <i class="fas fa-cocktail"></i>
+                                <span>Swim-up Bar</span>
+                            </div>
+                            <div class="pool-feature">
+                                <i class="fas fa-sun"></i>
+                                <span>Sunset Views</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pool-status">
+                            <div class="status-item">
+                                <i class="fas fa-water"></i>
+                                <div class="status-info">
+                                    <span class="status-label">Water Temp</span>
+                                    <span class="status-value" id="pool-temp">28°C</span>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <i class="fas fa-clock"></i>
+                                <div class="status-info">
+                                    <span class="status-label">Open Until</span>
+                                    <span class="status-value">8:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                          
+                </div>
+            </div>
+        </section>
+
+        <!-- Gym Preview Section -->
+        <section class="gym-preview" id="gym">
+            <div class="container">
+                <h2 class="section-title">Fitness Center</h2>
+                <div class="gym-content">
+                    <div class="gym-info">
+                        <h3>State-of-the-Art Gym</h3>
+                        <p>Stay fit during your stay with our premium fitness facilities featuring the latest equipment and professional training environment.</p>
+                        
+                        <div class="gym-features">
+                            <div class="gym-feature">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>Strength Training</span>
+                            </div>
+                            <div class="gym-feature">
+                                <i class="fas fa-running"></i>
+                                <span>Cardio Zone</span>
+                            </div>
+                            <div class="gym-feature">
+                                <i class="fas fa-users"></i>
+                                <span>Group Classes</span>
+                            </div>
+                            <div class="gym-feature">
+                                <i class="fas fa-user-md"></i>
+                                <span>Personal Training</span>
+                            </div>
+                        </div>
+                        
+                        <div class="gym-schedule">
+                            <h4>Opening Hours</h4>
+                            <div class="schedule-times">
+                                <div class="time-slot">
+                                    <span class="days">Mon - Fri</span>
+                                    <span class="hours">6:00 AM - 10:00 PM</span>
+                                </div>
+                                <div class="time-slot">
+                                    <span class="days">Weekends</span>
+                                    <span class="hours">7:00 AM - 9:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="gym-image">
+                        <img src="./assets/images/gym.jpeg" alt="Fitness Center">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>ApexStay</h3>
+                        <p>Your ultimate destination for luxury, comfort, and unforgettable experiences.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./rooms.html">Rooms & Suites</a></li>
+                            <li><a href="./resturent.html">Restaurant</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Features</h4>
+                        <ul>
+                            <li><a href="karting.html">Go-Karting</a></li>
+                            <li><a href="park.html">Side Park</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Contact Info</h4>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City</p>
+                            <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                            <p><i class="fas fa-envelope"></i> info@apexstay.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2024 ApexStay. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

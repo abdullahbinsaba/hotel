@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant - ApexStay | Premium Dining Experience</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>Apex<span>Stay</span></h2>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="./rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="./restaurant.html" class="nav-link">Restaurant</a></li>
+                <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+                 <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Features <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./karting.html">Go-Karting</a></li>
+                        <li><a href="park.html">Side Park</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Restaurant Hero Section -->
+        <section class="restaurant-hero">
+            <div class="restaurant-hero-content">
+                <h1>La Belle Cuisine</h1>
+                <p>Experience culinary excellence with in-room dining or reserve your table for an unforgettable experience</p>
+            </div>
+        </section>
+
+        <!-- Service Selection -->
+        <section class="service-selection">
+            <div class="container">
+                <div class="service-buttons">
+                    <button class="service-btn active" data-service="in-room">In-Room Dining</button>
+                    <button class="service-btn" data-service="reservation">Table Reservation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Categories -->
+        <section class="menu-categories">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="breakfast">Breakfast</button>
+                    <button class="category-tab" data-category="lunch">Lunch</button>
+                    <button class="category-tab" data-category="dinner">Dinner</button>
+                    <button class="category-tab" data-category="snacks">Snacks & Beverages</button>
+                </div>
+
+                <!-- Breakfast Menu -->
+                <div class="menu-category active" id="breakfast-menu">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Continental Breakfast</h3>
+                                <p>Fresh pastries, seasonal fruits, yogurt, and choice of coffee or tea</p>
+                                <span class="item-price">$18</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Continental Breakfast" data-price="18">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>American Breakfast</h3>
+                                <p>Eggs any style, bacon, sausage, toast, and hash browns</p>
+                                <span class="item-price">$22</span>
+                            </div>
+                            <button class="add-to-cart" data-item="American Breakfast" data-price="22">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Healthy Start</h3>
+                                <p>Avocado toast, poached eggs, smoked salmon, and fresh juice</p>
+                                <span class="item-price">$24</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Healthy Start" data-price="24">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Pancake Stack</h3>
+                                <p>Fluffy buttermilk pancakes with maple syrup and berries</p>
+                                <span class="item-price">$16</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Pancake Stack" data-price="16">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch Menu -->
+                <div class="menu-category" id="lunch-menu">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Caesar Salad</h3>
+                                <p>Fresh romaine, parmesan, croutons, and classic caesar dressing</p>
+                                <span class="item-price">$16</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Caesar Salad" data-price="16">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Club Sandwich</h3>
+                                <p>Triple-decker with turkey, bacon, lettuce, tomato, and mayo</p>
+                                <span class="item-price">$19</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Club Sandwich" data-price="19">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Grilled Salmon</h3>
+                                <p>Atlantic salmon with roasted vegetables and lemon butter sauce</p>
+                                <span class="item-price">$28</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Grilled Salmon" data-price="28">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Beef Burger</h3>
+                                <p>Angus beef patty with cheese, bacon, and truffle fries</p>
+                                <span class="item-price">$22</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Beef Burger" data-price="22">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dinner Menu -->
+                <div class="menu-category" id="dinner-menu">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Filet Mignon</h3>
+                                <p>8oz premium beef tenderloin with red wine reduction and mashed potatoes</p>
+                                <span class="item-price">$42</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Filet Mignon" data-price="42">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Lobster Thermidor</h3>
+                                <p>Whole lobster with brandy cream sauce and seasonal vegetables</p>
+                                <span class="item-price">$48</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Lobster Thermidor" data-price="48">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Vegetarian Risotto</h3>
+                                <p>Arborio rice with wild mushrooms, asparagus, and truffle oil</p>
+                                <span class="item-price">$26</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Vegetarian Risotto" data-price="26">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Duck Confit</h3>
+                                <p>Slow-cooked duck leg with cherry glaze and roasted potatoes</p>
+                                <span class="item-price">$34</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Duck Confit" data-price="34">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snacks Menu -->
+                <div class="menu-category" id="snacks-menu">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>French Fries</h3>
+                                <p>Crispy golden fries with sea salt</p>
+                                <span class="item-price">$8</span>
+                            </div>
+                            <button class="add-to-cart" data-item="French Fries" data-price="8">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Mozzarella Sticks</h3>
+                                <p>Breaded mozzarella with marinara sauce</p>
+                                <span class="item-price">$12</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Mozzarella Sticks" data-price="12">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Fresh Juice</h3>
+                                <p>Orange, apple, or carrot juice</p>
+                                <span class="item-price">$6</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Fresh Juice" data-price="6">Add to Order</button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>Coffee Selection</h3>
+                                <p>Espresso, cappuccino, latte, or Americano</p>
+                                <span class="item-price">$5</span>
+                            </div>
+                            <button class="add-to-cart" data-item="Coffee Selection" data-price="5">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order/Reservation Forms -->
+        <section class="order-forms">
+            <div class="container">
+                <!-- In-Room Dining Form -->
+                <div class="order-form active" id="in-room-form">
+                    <h2>In-Room Dining Order</h2>
+                    <form class="dining-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="room-number">Room Number *</label>
+                                <input type="text" id="room-number" name="room-number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery-time">Preferred Delivery Time *</label>
+                                <input type="time" id="delivery-time" name="delivery-time" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="special-instructions">Special Instructions</label>
+                            <textarea id="special-instructions" name="special-instructions" rows="3" placeholder="Any dietary restrictions or special requests..."></textarea>
+                        </div>
+
+                        <div class="order-summary">
+                            <h3>Your Order</h3>
+                            <div class="order-items" id="order-items">
+                                <p class="empty-order">No items added yet</p>
+                            </div>
+                            <div class="order-total">
+                                <strong>Total: $<span id="order-total">0</span></strong>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-order-btn">Place Order</button>
+                    </form>
+                </div>
+
+                <!-- Table Reservation Form -->
+                <div class="order-form" id="reservation-form">
+                    <h2>Table Reservation</h2>
+                    <form class="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reservation-date">Date *</label>
+                                <input type="date" id="reservation-date" name="reservation-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reservation-time">Time *</label>
+                                <input type="time" id="reservation-time" name="reservation-time" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="party-size">Party Size *</label>
+                                <select id="party-size" name="party-size" required>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6+ People</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="table-type">Table Preference</label>
+                                <select id="table-type" name="table-type">
+                                    <option value="any">Any Table</option>
+                                    <option value="window">Window Table</option>
+                                    <option value="booth">Booth</option>
+                                    <option value="private">Private Area</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guest-name">Full Name *</label>
+                            <input type="text" id="guest-name" name="guest-name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guest-phone">Phone Number *</label>
+                                <input type="tel" id="guest-phone" name="guest-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guest-email">Email Address</label>
+                                <input type="email" id="guest-email" name="guest-email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reservation-notes">Special Requests</label>
+                            <textarea id="reservation-notes" name="reservation-notes" rows="3" placeholder="Celebration, dietary needs, or other requests..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-reservation-btn">Reserve Table</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurant Information -->
+        <section class="restaurant-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Opening Hours</h3>
+                        <p>Breakfast: 6:00 AM - 11:00 AM</p>
+                        <p>Lunch: 12:00 PM - 3:00 PM</p>
+                        <p>Dinner: 6:00 PM - 11:00 PM</p>
+                        <p>Snacks: 24/7 Available</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Contact</h3>
+                        <p>Restaurant: +1 (234) 567-8910</p>
+                        <p>Room Service: Ext. 123</p>
+                        <p>Email: restaurant@apexstay.com</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Specialties</h3>
+                        <p>International Cuisine</p>
+                        <p>Fresh Local Ingredients</p>
+                        <p>Vegetarian & Vegan Options</p>
+                        <p>Extensive Wine Selection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ApexStay</h3>
+                    <p>Your ultimate destination for luxury, comfort, and unforgettable experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="restaurant.html">Restaurant</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="karting.html">Go-Karting</a></li>
+                        <li><a href="park.html">Side Park</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, City</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                        <p><i class="fas fa-envelope"></i> info@apexstay.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ApexStay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Service Selection
+            const serviceButtons = document.querySelectorAll('.service-btn');
+            const orderForms = document.querySelectorAll('.order-form');
+            
+            serviceButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const service = this.getAttribute('data-service');
+                    
+                    // Update active button
+                    serviceButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding form
+                    orderForms.forEach(form => {
+                        form.classList.remove('active');
+                        if (form.id === `${service}-form`) {
+                            form.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Menu Category Tabs
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const menuCategories = document.querySelectorAll('.menu-category');
+            
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active tab
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding menu
+                    menuCategories.forEach(menu => {
+                        menu.classList.remove('active');
+                        if (menu.id === `${category}-menu`) {
+                            menu.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Shopping Cart Functionality
+            let cart = [];
+            const orderItems = document.getElementById('order-items');
+            const orderTotal = document.getElementById('order-total');
+
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const item = this.getAttribute('data-item');
+                    const price = parseFloat(this.getAttribute('data-price'));
+                    
+                    // Add to cart
+                    cart.push({ item, price });
+                    updateOrderSummary();
+                    
+                    // Visual feedback
+                    this.textContent = 'Added!';
+                    this.disabled = true;
+                    setTimeout(() => {
+                        this.textContent = 'Add to Order';
+                        this.disabled = false;
+                    }, 1500);
+                });
+            });
+
+            function updateOrderSummary() {
+                if (cart.length === 0) {
+                    orderItems.innerHTML = '<p class="empty-order">No items added yet</p>';
+                    orderTotal.textContent = '0';
+                    return;
+                }
+
+                let itemsHTML = '';
+                let total = 0;
+                
+                cart.forEach((cartItem, index) => {
+                    total += cartItem.price;
+                    itemsHTML += `
+                        <div class="order-item">
+                            <span>${cartItem.item}</span>
+                            <span>$${cartItem.price}</span>
+                            <button class="remove-item" data-index="${index}"><i class="fas fa-times"></i></button>
+                        </div>
+                    `;
+                });
+
+                orderItems.innerHTML = itemsHTML;
+                orderTotal.textContent = total.toFixed(2);
+
+                // Add remove functionality
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        cart.splice(index, 1);
+                        updateOrderSummary();
+                    });
+                });
+            }
+
+            // Form Submissions
+            document.querySelector('.dining-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (cart.length === 0) {
+                    alert('Please add items to your order first.');
+                    return;
+                }
+                alert('Thank you! Your room service order has been placed and will be delivered at your requested time.');
+                this.reset();
+                cart = [];
+                updateOrderSummary();
+            });
+
+            document.querySelector('.reservation-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you! Your table reservation has been confirmed. We look forward to serving you.');
+                this.reset();
+            });
+
+            // Set minimum date for reservations to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('reservation-date').min = today;
+        });
+    </script>
+</body>
+</html>
