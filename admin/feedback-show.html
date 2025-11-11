@@ -9,34 +9,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+    
     <div class="admin-container">
+        <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <h2>Apex Stay</h2>
                 <p>Admin Panel</p>
+                <button class="sidebar-close" type="button" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <ul class="nav-links">
-                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="users-show.html"><i class="fas fa-users"></i> Users</a></li>
-                <li><a href="manager-create.html"><i class="fas fa-user-plus"></i> Create Manager</a></li>
-                <li><a href="manager-show.html"><i class="fas fa-user-tie"></i> Managers</a></li>
-                <li><a href="staff-create.html"><i class="fas fa-user-plus"></i> Create Staff</a></li>
-                <li><a href="staff-show.html"><i class="fas fa-user-check"></i> Staff</a></li>
-                <li class="active"><a href="feedback-show.html"><i class="fas fa-comments"></i> Feedback</a></li>
-                <li><a href="rooms-create.html"><i class="fas fa-plus-circle"></i> Create Room</a></li>
-                <li><a href="rooms-show.html"><i class="fas fa-bed"></i> Rooms</a></li>
-                <li><a href="tables-create.html"><i class="fas fa-plus-square"></i> Create Table</a></li>
-                <li><a href="tables-show.html"><i class="fas fa-table"></i> Tables</a></li>
-                <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
-                <li class="logout"><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="users-show.html">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a></li>
+                <li><a href="manager-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Manager</span>
+                </a></li>
+                <li><a href="manager-show.html">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Managers</span>
+                </a></li>
+                <li><a href="staff-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Staff</span>
+                </a></li>
+                <li><a href="staff-show.html">
+                    <i class="fas fa-user-check"></i>
+                    <span>Staff</span>
+                </a></li>
+                <li class="active"><a href="feedback-show.html">
+                    <i class="fas fa-comments"></i>
+                    <span>Feedback</span>
+                </a></li>
+                <li><a href="rooms-create.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Room</span>
+                </a></li>
+                <li><a href="rooms-show.html">
+                    <i class="fas fa-bed"></i>
+                    <span>Rooms</span>
+                </a></li>
+                <li><a href="tables-create.html">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create Table</span>
+                </a></li>
+                <li><a href="tables-show.html">
+                    <i class="fas fa-table"></i>
+                    <span>Tables</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="logout"><a href="../index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a></li>
             </ul>
         </div>
 
+        <!-- Main Content -->
         <div class="main-content">
+            <!-- Header / Navigation Bar -->
             <div class="header">
-                <div class="header-title">
-                    <h1>Customer Feedback</h1>
-                    <p>Manage and review customer feedback</p>
+                <div class="header-left">
+                    <!-- Hamburger Menu Button (Three Lines) -->
+                    <button class="hamburger-btn" type="button" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-title">
+                        <h1>Customer Feedback</h1>
+                        <p>Manage and review customer feedback</p>
+                    </div>
                 </div>
                 <div class="header-actions">
                     <div class="search-box">
@@ -54,160 +108,163 @@
                 </div>
             </div>
 
-            <div class="stats-cards">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-star"></i>
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>4.8</h3>
+                            <p>Average Rating</p>
+                        </div>
                     </div>
-                    <div class="stat-info">
-                        <h3>4.8</h3>
-                        <p>Average Rating</p>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>156</h3>
+                            <p>Total Reviews</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>89%</h3>
+                            <p>Positive Feedback</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Pending Response</p>
+                        </div>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-comment"></i>
-                    </div>
-                    <div class="stat-info">
-                        <h3>156</h3>
-                        <p>Total Reviews</p>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-thumbs-up"></i>
-                    </div>
-                    <div class="stat-info">
-                        <h3>89%</h3>
-                        <p>Positive Feedback</p>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="stat-info">
-                        <h3>12</h3>
-                        <p>Pending Response</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="content-card">
-                <div class="card-header">
-                    <h3>All Feedback</h3>
-                    <div class="card-actions">
-                        <button class="btn btn-secondary"><i class="fas fa-download"></i> Export</button>
-                        <select class="filter-select">
-                            <option>All Ratings</option>
-                            <option>5 Stars</option>
-                            <option>4 Stars</option>
-                            <option>3 Stars</option>
-                            <option>2 Stars</option>
-                            <option>1 Star</option>
-                        </select>
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>All Feedback</h3>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary"><i class="fas fa-download"></i> Export</button>
+                            <select class="filter-select">
+                                <option>All Ratings</option>
+                                <option>5 Stars</option>
+                                <option>4 Stars</option>
+                                <option>3 Stars</option>
+                                <option>2 Stars</option>
+                                <option>1 Star</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="feedback-list">
-                    <div class="feedback-item">
-                        <div class="feedback-header">
-                            <div class="user-info">
-                                <img src="https://ui-avatars.com/api/?name=John+Smith&background=1e40af&color=fff" alt="John Smith">
-                                <div>
-                                    <h4>John Smith</h4>
-                                    <div class="rating">
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
+                    
+                    <div class="feedback-list">
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <div class="user-info">
+                                    <img src="https://ui-avatars.com/api/?name=John+Smith&background=1e40af&color=fff" alt="John Smith">
+                                    <div>
+                                        <h4>John Smith</h4>
+                                        <div class="rating">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                        </div>
                                     </div>
                                 </div>
+                                <span class="feedback-date">2 days ago</span>
                             </div>
-                            <span class="feedback-date">2 days ago</span>
-                        </div>
-                        <div class="feedback-content">
-                            <p>Excellent service! The staff was very helpful and the room was spotless. Will definitely stay here again on my next visit.</p>
-                        </div>
-                        <div class="feedback-meta">
-                            <span class="room-type">Deluxe Room • Stayed 3 nights</span>
-                            <div class="feedback-actions">
-                                <button class="btn btn-sm btn-primary">Reply</button>
-                                <button class="btn btn-sm btn-secondary">Mark as Read</button>
+                            <div class="feedback-content">
+                                <p>Excellent service! The staff was very helpful and the room was spotless. Will definitely stay here again on my next visit.</p>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="feedback-item">
-                        <div class="feedback-header">
-                            <div class="user-info">
-                                <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=0d9488&color=fff" alt="Sarah Johnson">
-                                <div>
-                                    <h4>Sarah Johnson</h4>
-                                    <div class="rating">
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
+                            <div class="feedback-meta">
+                                <span class="room-type">Deluxe Room • Stayed 3 nights</span>
+                                <div class="feedback-actions">
+                                    <button class="btn btn-sm btn-primary">Reply</button>
+                                    <button class="btn btn-sm btn-secondary">Mark as Read</button>
                                 </div>
                             </div>
-                            <span class="feedback-date">1 week ago</span>
                         </div>
-                        <div class="feedback-content">
-                            <p>Great location and comfortable beds. The only issue was the Wi-Fi connection in my room was quite slow. Otherwise, a pleasant stay.</p>
-                        </div>
-                        <div class="feedback-meta">
-                            <span class="room-type">Executive Suite • Stayed 2 nights</span>
-                            <div class="feedback-actions">
-                                <button class="btn btn-sm btn-primary">Reply</button>
-                                <button class="btn btn-sm btn-secondary">Mark as Read</button>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="feedback-item">
-                        <div class="feedback-header">
-                            <div class="user-info">
-                                <img src="https://ui-avatars.com/api/?name=Mike+Brown&background=f59e0b&color=fff" alt="Mike Brown">
-                                <div>
-                                    <h4>Mike Brown</h4>
-                                    <div class="rating">
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star filled"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <div class="user-info">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=0d9488&color=fff" alt="Sarah Johnson">
+                                    <div>
+                                        <h4>Sarah Johnson</h4>
+                                        <div class="rating">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
                                     </div>
                                 </div>
+                                <span class="feedback-date">1 week ago</span>
                             </div>
-                            <span class="feedback-date">2 weeks ago</span>
-                        </div>
-                        <div class="feedback-content">
-                            <p>Room wasn't cleaned properly when I arrived. Had to wait an extra hour to check in. The staff did apologize and offered a discount, but it was still disappointing.</p>
-                        </div>
-                        <div class="feedback-meta">
-                            <span class="room-type">Standard Room • Stayed 1 night</span>
-                            <div class="feedback-actions">
-                                <button class="btn btn-sm btn-primary">Reply</button>
-                                <button class="btn btn-sm btn-secondary">Mark as Read</button>
+                            <div class="feedback-content">
+                                <p>Great location and comfortable beds. The only issue was the Wi-Fi connection in my room was quite slow. Otherwise, a pleasant stay.</p>
+                            </div>
+                            <div class="feedback-meta">
+                                <span class="room-type">Executive Suite • Stayed 2 nights</span>
+                                <div class="feedback-actions">
+                                    <button class="btn btn-sm btn-primary">Reply</button>
+                                    <button class="btn btn-sm btn-secondary">Mark as Read</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="table-footer">
-                    <div class="pagination">
-                        <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
-                        <button class="page-btn active">1</button>
-                        <button class="page-btn">2</button>
-                        <button class="page-btn">3</button>
-                        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                        <div class="feedback-item">
+                            <div class="feedback-header">
+                                <div class="user-info">
+                                    <img src="https://ui-avatars.com/api/?name=Mike+Brown&background=f59e0b&color=fff" alt="Mike Brown">
+                                    <div>
+                                        <h4>Mike Brown</h4>
+                                        <div class="rating">
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star filled"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="feedback-date">2 weeks ago</span>
+                            </div>
+                            <div class="feedback-content">
+                                <p>Room wasn't cleaned properly when I arrived. Had to wait an extra hour to check in. The staff did apologize and offered a discount, but it was still disappointing.</p>
+                            </div>
+                            <div class="feedback-meta">
+                                <span class="room-type">Standard Room • Stayed 1 night</span>
+                                <div class="feedback-actions">
+                                    <button class="btn btn-sm btn-primary">Reply</button>
+                                    <button class="btn btn-sm btn-secondary">Mark as Read</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="table-info">
-                        Showing 1-3 of 156 feedbacks
+
+                    <div class="table-footer">
+                        <div class="pagination">
+                            <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="table-info">
+                            Showing 1-3 of 156 feedbacks
+                        </div>
                     </div>
                 </div>
             </div>

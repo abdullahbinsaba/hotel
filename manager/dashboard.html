@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Stay - Admin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../assets/css/manager/style.css">
+    <link rel="stylesheet" href="../assets/css/manager/responsive.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Apex Stay</h2>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#dashboard" class="nav-link active" data-page="dashboard">Dashboard</a></li>
+                    <li><a href="#users" class="nav-link" data-page="users">Users</a></li>
+                    <li><a href="#staff" class="nav-link" data-page="staff">Staff</a></li>
+                    <li><a href="#feedback" class="nav-link" data-page="feedback">Feedback</a></li>
+                    <li><a href="#rooms" class="nav-link" data-page="rooms">Rooms</a></li>
+                    <li><a href="#tables" class="nav-link" data-page="tables">Tables</a></li>
+                    <li><a href="#profile" class="nav-link" data-page="profile">Profile</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="menu-toggle">☰</button>
+                    <h1 id="page-title">Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <span>Admin User</span>
+                        <div class="user-avatar">AU</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Dashboard Page -->
+                <section id="dashboard" class="page active">
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <h3>Total Bookings</h3>
+                            <p class="stat-number">1,248</p>
+                            <span class="stat-change positive">+12%</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Revenue</h3>
+                            <p class="stat-number">$84,560</p>
+                            <span class="stat-change positive">+8%</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Occupancy Rate</h3>
+                            <p class="stat-number">78%</p>
+                            <span class="stat-change negative">-3%</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Pending Check-ins</h3>
+                            <p class="stat-number">24</p>
+                            <span class="stat-change positive">+5%</span>
+                        </div>
+                    </div>
+
+                    <div class="charts-container">
+                        <div class="chart-card">
+                            <h3>Booking Trends</h3>
+                            <div class="chart-placeholder">
+                                <canvas id="bookingChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-card">
+                            <h3>Revenue by Room Type</h3>
+                            <div class="chart-placeholder">
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-card">
+                            <h3>Occupancy Rate</h3>
+                            <div class="chart-placeholder">
+                                <canvas id="occupancyChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-card">
+                            <h3>Payment Methods</h3>
+                            <div class="chart-placeholder">
+                                <canvas id="paymentChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Initialize charts when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Booking Trends Chart (Line Chart)
+            const bookingCtx = document.getElementById('bookingChart').getContext('2d');
+            const bookingChart = new Chart(bookingCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Bookings',
+                        data: [65, 59, 80, 81, 56, 55, 70, 75, 82, 78, 85, 90],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Revenue by Room Type Chart (Bar Chart)
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            const revenueChart = new Chart(revenueCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Standard', 'Deluxe', 'Executive'],
+                    datasets: [{
+                        label: 'Revenue ($)',
+                        data: [32000, 45000, 28000],
+                        backgroundColor: [
+                            'rgba(52, 152, 219, 0.7)',
+                            'rgba(46, 204, 113, 0.7)',
+                            'rgba(155, 89, 182, 0.7)'
+                        ],
+                        borderColor: [
+                            '#3498db',
+                            '#2ecc71',
+                            '#9b59b6'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Occupancy Rate Chart (Doughnut Chart)
+            const occupancyCtx = document.getElementById('occupancyChart').getContext('2d');
+            const occupancyChart = new Chart(occupancyCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Occupied', 'Available', 'Maintenance'],
+                    datasets: [{
+                        data: [65, 30, 5],
+                        backgroundColor: [
+                            'rgba(52, 152, 219, 0.7)',
+                            'rgba(46, 204, 113, 0.7)',
+                            'rgba(243, 156, 18, 0.7)'
+                        ],
+                        borderColor: [
+                            '#3498db',
+                            '#2ecc71',
+                            '#f39c12'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Payment Methods Chart (Pie Chart)
+            const paymentCtx = document.getElementById('paymentChart').getContext('2d');
+            const paymentChart = new Chart(paymentCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Credit Card', 'Debit Card', 'PayPal', 'Cash'],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: [
+                            'rgba(52, 152, 219, 0.7)',
+                            'rgba(46, 204, 113, 0.7)',
+                            'rgba(155, 89, 182, 0.7)',
+                            'rgba(243, 156, 18, 0.7)'
+                        ],
+                        borderColor: [
+                            '#3498db',
+                            '#2ecc71',
+                            '#9b59b6',
+                            '#f39c12'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="../assets/js/manager/script.js"></script>
+</body>
+</html>

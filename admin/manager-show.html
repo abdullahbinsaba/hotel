@@ -9,34 +9,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+    
     <div class="admin-container">
+        <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <h2>Apex Stay</h2>
                 <p>Admin Panel</p>
+                <button class="sidebar-close" type="button" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <ul class="nav-links">
-                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="users-show.html"><i class="fas fa-users"></i> Users</a></li>
-                <li><a href="manager-create.html"><i class="fas fa-user-plus"></i> Create Manager</a></li>
-                <li class="active"><a href="manager-show.html"><i class="fas fa-user-tie"></i> Managers</a></li>
-                <li><a href="staff-create.html"><i class="fas fa-user-plus"></i> Create Staff</a></li>
-                <li><a href="staff-show.html"><i class="fas fa-user-check"></i> Staff</a></li>
-                <li><a href="feedback-show.html"><i class="fas fa-comments"></i> Feedback</a></li>
-                <li><a href="rooms-create.html"><i class="fas fa-plus-circle"></i> Create Room</a></li>
-                <li><a href="rooms-show.html"><i class="fas fa-bed"></i> Rooms</a></li>
-                <li><a href="tables-create.html"><i class="fas fa-plus-square"></i> Create Table</a></li>
-                <li><a href="tables-show.html"><i class="fas fa-table"></i> Tables</a></li>
-                <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
-                <li class="logout"><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="users-show.html">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a></li>
+                <li><a href="manager-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Manager</span>
+                </a></li>
+                <li class="active"><a href="manager-show.html">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Managers</span>
+                </a></li>
+                <li><a href="staff-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Staff</span>
+                </a></li>
+                <li><a href="staff-show.html">
+                    <i class="fas fa-user-check"></i>
+                    <span>Staff</span>
+                </a></li>
+                <li><a href="feedback-show.html">
+                    <i class="fas fa-comments"></i>
+                    <span>Feedback</span>
+                </a></li>
+                <li><a href="rooms-create.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Room</span>
+                </a></li>
+                <li><a href="rooms-show.html">
+                    <i class="fas fa-bed"></i>
+                    <span>Rooms</span>
+                </a></li>
+                <li><a href="tables-create.html">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create Table</span>
+                </a></li>
+                <li><a href="tables-show.html">
+                    <i class="fas fa-table"></i>
+                    <span>Tables</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="logout"><a href="../index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a></li>
             </ul>
         </div>
 
+        <!-- Main Content -->
         <div class="main-content">
+            <!-- Header / Navigation Bar -->
             <div class="header">
-                <div class="header-title">
-                    <h1>Managers</h1>
-                    <p>Manage all hotel managers</p>
+                <div class="header-left">
+                    <!-- Hamburger Menu Button (Three Lines) -->
+                    <button class="hamburger-btn" type="button" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-title">
+                        <h1>Managers</h1>
+                        <p>Manage all hotel managers</p>
+                    </div>
                 </div>
                 <div class="header-actions">
                     <div class="search-box">
@@ -57,116 +111,119 @@
                 </div>
             </div>
 
-            <div class="content-card">
-                <div class="card-header">
-                    <h3>All Managers</h3>
-                    <div class="card-actions">
-                        <button class="btn btn-secondary"><i class="fas fa-download"></i> Export</button>
-                        <button class="btn btn-secondary"><i class="fas fa-filter"></i> Filter</button>
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>All Managers</h3>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary"><i class="fas fa-download"></i> Export</button>
+                            <button class="btn btn-secondary"><i class="fas fa-filter"></i> Filter</button>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="table-container">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Manager</th>
-                                <th>Department</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Shift</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#MG001</td>
-                                <td>
-                                    <div class="user-info">
-                                        <img src="https://ui-avatars.com/api/?name=Robert+Wilson&background=1e40af&color=fff" alt="Robert Wilson">
-                                        <div>
-                                            <span>Robert Wilson</span>
-                                            <small>Front Desk</small>
+                    
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Manager</th>
+                                    <th>Department</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Shift</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#MG001</td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://ui-avatars.com/api/?name=Robert+Wilson&background=1e40af&color=fff" alt="Robert Wilson">
+                                            <div>
+                                                <span>Robert Wilson</span>
+                                                <small>Front Desk</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>Front Desk</td>
-                                <td>robert.wilson@apexstay.com</td>
-                                <td>+1 234 567 890</td>
-                                <td>Morning</td>
-                                <td><span class="status active">Active</span></td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-icon view"><i class="fas fa-eye"></i></button>
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#MG002</td>
-                                <td>
-                                    <div class="user-info">
-                                        <img src="https://ui-avatars.com/api/?name=Lisa+Brown&background=0d9488&color=fff" alt="Lisa Brown">
-                                        <div>
-                                            <span>Lisa Brown</span>
-                                            <small>Housekeeping</small>
+                                    </td>
+                                    <td>Front Desk</td>
+                                    <td>robert.wilson@apexstay.com</td>
+                                    <td>+1 234 567 890</td>
+                                    <td>Morning</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon view"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>Housekeeping</td>
-                                <td>lisa.brown@apexstay.com</td>
-                                <td>+1 234 567 891</td>
-                                <td>Evening</td>
-                                <td><span class="status active">Active</span></td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-icon view"><i class="fas fa-eye"></i></button>
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#MG003</td>
-                                <td>
-                                    <div class="user-info">
-                                        <img src="https://ui-avatars.com/api/?name=David+Lee&background=f59e0b&color=fff" alt="David Lee">
-                                        <div>
-                                            <span>David Lee</span>
-                                            <small>Restaurant</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#MG002</td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://ui-avatars.com/api/?name=Lisa+Brown&background=0d9488&color=fff" alt="Lisa Brown">
+                                            <div>
+                                                <span>Lisa Brown</span>
+                                                <small>Housekeeping</small>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>Restaurant</td>
-                                <td>david.lee@apexstay.com</td>
-                                <td>+1 234 567 892</td>
-                                <td>Night</td>
-                                <td><span class="status inactive">Inactive</span></td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-icon view"><i class="fas fa-eye"></i></button>
-                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
-                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                    </td>
+                                    <td>Housekeeping</td>
+                                    <td>lisa.brown@apexstay.com</td>
+                                    <td>+1 234 567 891</td>
+                                    <td>Evening</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon view"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#MG003</td>
+                                    <td>
+                                        <div class="user-info">
+                                            <img src="https://ui-avatars.com/api/?name=David+Lee&background=f59e0b&color=fff" alt="David Lee">
+                                            <div>
+                                                <span>David Lee</span>
+                                                <small>Restaurant</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Restaurant</td>
+                                    <td>david.lee@apexstay.com</td>
+                                    <td>+1 234 567 892</td>
+                                    <td>Night</td>
+                                    <td><span class="status inactive">Inactive</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon view"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                <div class="table-footer">
-                    <div class="pagination">
-                        <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
-                        <button class="page-btn active">1</button>
-                        <button class="page-btn">2</button>
-                        <button class="page-btn">3</button>
-                        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                    <div class="table-info">
-                        Showing 1-3 of 12 managers
+                    <div class="table-footer">
+                        <div class="pagination">
+                            <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="table-info">
+                            Showing 1-3 of 12 managers
+                        </div>
                     </div>
                 </div>
             </div>

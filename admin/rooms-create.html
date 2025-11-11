@@ -9,36 +9,94 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+    
     <div class="admin-container">
+        <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <h2>Apex Stay</h2>
                 <p>Admin Panel</p>
+                <button class="sidebar-close" type="button" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <ul class="nav-links">
-                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="users-show.html"><i class="fas fa-users"></i> Users</a></li>
-                <li><a href="manager-create.html"><i class="fas fa-user-plus"></i> Create Manager</a></li>
-                <li><a href="manager-show.html"><i class="fas fa-user-tie"></i> Managers</a></li>
-                <li><a href="staff-create.html"><i class="fas fa-user-plus"></i> Create Staff</a></li>
-                <li><a href="staff-show.html"><i class="fas fa-user-check"></i> Staff</a></li>
-                <li><a href="feedback-show.html"><i class="fas fa-comments"></i> Feedback</a></li>
-                <li class="active"><a href="rooms-create.html"><i class="fas fa-plus-circle"></i> Create Room</a></li>
-                <li><a href="rooms-show.html"><i class="fas fa-bed"></i> Rooms</a></li>
-                <li><a href="tables-create.html"><i class="fas fa-plus-square"></i> Create Table</a></li>
-                <li><a href="tables-show.html"><i class="fas fa-table"></i> Tables</a></li>
-                <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
-                <li class="logout"><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="users-show.html">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a></li>
+                <li><a href="manager-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Manager</span>
+                </a></li>
+                <li><a href="manager-show.html">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Managers</span>
+                </a></li>
+                <li><a href="staff-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Staff</span>
+                </a></li>
+                <li><a href="staff-show.html">
+                    <i class="fas fa-user-check"></i>
+                    <span>Staff</span>
+                </a></li>
+                <li><a href="feedback-show.html">
+                    <i class="fas fa-comments"></i>
+                    <span>Feedback</span>
+                </a></li>
+                <li class="active"><a href="rooms-create.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Room</span>
+                </a></li>
+                <li><a href="rooms-show.html">
+                    <i class="fas fa-bed"></i>
+                    <span>Rooms</span>
+                </a></li>
+                <li><a href="tables-create.html">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create Table</span>
+                </a></li>
+                <li><a href="tables-show.html">
+                    <i class="fas fa-table"></i>
+                    <span>Tables</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="logout"><a href="../index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a></li>
             </ul>
         </div>
 
+        <!-- Main Content -->
         <div class="main-content">
+            <!-- Header / Navigation Bar -->
             <div class="header">
-                <div class="header-title">
-                    <h1>Create Room</h1>
-                    <p>Add new room to the hotel</p>
+                <div class="header-left">
+                    <!-- Hamburger Menu Button (Three Lines) -->
+                    <button class="hamburger-btn" type="button" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-title">
+                        <h1>Create Room</h1>
+                        <p>Add new room to the hotel</p>
+                    </div>
                 </div>
                 <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
                     <div class="notification">
                         <i class="fas fa-bell"></i>
                         <span class="badge">3</span>
@@ -50,118 +108,124 @@
                 </div>
             </div>
 
-            <div class="content-card">
-                <form class="form-container">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="roomNumber">Room Number</label>
-                            <input type="text" id="roomNumber" placeholder="e.g., 101" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="roomType">Room Type</label>
-                            <select id="roomType" required>
-                                <option value="">Select Room Type</option>
-                                <option value="standard">Standard Room</option>
-                                <option value="deluxe">Deluxe Room</option>
-                                <option value="executive">Executive Suite</option>
-                            </select>
-                        </div>
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2>Room Information</h2>
+                        <p>Fill in the details to create a new room</p>
                     </div>
+                    <form class="form-container">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="roomNumber">Room Number *</label>
+                                <input type="text" id="roomNumber" placeholder="e.g., 101" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="roomType">Room Type *</label>
+                                <select id="roomType" required>
+                                    <option value="">Select Room Type</option>
+                                    <option value="standard">Standard Room</option>
+                                    <option value="deluxe">Deluxe Room</option>
+                                    <option value="executive">Executive Suite</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <div class="form-row">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="floor">Floor *</label>
+                                <select id="floor" required>
+                                    <option value="">Select Floor</option>
+                                    <option value="1">1st Floor</option>
+                                    <option value="2">2nd Floor</option>
+                                    <option value="3">3rd Floor</option>
+                                    <option value="4">4th Floor</option>
+                                    <option value="5">5th Floor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="capacity">Capacity *</label>
+                                <select id="capacity" required>
+                                    <option value="">Select Capacity</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 Persons</option>
+                                    <option value="3">3 Persons</option>
+                                    <option value="4">4 Persons</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="price">Price Per Night ($) *</label>
+                                <input type="number" id="price" placeholder="Enter price" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="size">Room Size (sq ft) *</label>
+                                <input type="number" id="size" placeholder="Enter room size" required>
+                            </div>
+                        </div>
+
                         <div class="form-group">
-                            <label for="floor">Floor</label>
-                            <select id="floor" required>
-                                <option value="">Select Floor</option>
-                                <option value="1">1st Floor</option>
-                                <option value="2">2nd Floor</option>
-                                <option value="3">3rd Floor</option>
-                                <option value="4">4th Floor</option>
-                                <option value="5">5th Floor</option>
-                            </select>
+                            <label>Amenities</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="amenities" value="wifi">
+                                    <span class="checkmark"></span>
+                                    WiFi
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="amenities" value="tv">
+                                    <span class="checkmark"></span>
+                                    TV
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="amenities" value="ac">
+                                    <span class="checkmark"></span>
+                                    Air Conditioning
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="amenities" value="heating">
+                                    <span class="checkmark"></span>
+                                    Heating
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="amenities" value="minibar">
+                                    <span class="checkmark"></span>
+                                    Mini Bar
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="amenities" value="safe">
+                                    <span class="checkmark"></span>
+                                    Safe
+                                </label>
+                            </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="capacity">Capacity</label>
-                            <select id="capacity" required>
-                                <option value="">Select Capacity</option>
-                                <option value="1">1 Person</option>
-                                <option value="2">2 Persons</option>
-                                <option value="3">3 Persons</option>
-                                <option value="4">4 Persons</option>
-                            </select>
+                            <label for="description">Room Description</label>
+                            <textarea id="description" placeholder="Describe the room features and view..." rows="4"></textarea>
                         </div>
-                    </div>
 
-                    <div class="form-row">
                         <div class="form-group">
-                            <label for="price">Price Per Night ($)</label>
-                            <input type="number" id="price" placeholder="Enter price" required>
+                            <label for="roomImages">Room Images</label>
+                            <div class="file-upload">
+                                <input type="file" id="roomImages" accept="image/*" multiple>
+                                <div class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span class="file-name">Choose files or drag and drop</span>
+                                </div>
+                            </div>
+                            <small class="help-text">You can select multiple images</small>
                         </div>
-                        <div class="form-group">
-                            <label for="size">Room Size (sq ft)</label>
-                            <input type="number" id="size" placeholder="Enter room size" required>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Create Room</button>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Amenities</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox">
-                                <input type="checkbox" name="amenities" value="wifi">
-                                <span class="checkmark"></span>
-                                WiFi
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="amenities" value="tv">
-                                <span class="checkmark"></span>
-                                TV
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="amenities" value="ac">
-                                <span class="checkmark"></span>
-                                Air Conditioning
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="amenities" value="heating">
-                                <span class="checkmark"></span>
-                                Heating
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="amenities" value="minibar">
-                                <span class="checkmark"></span>
-                                Mini Bar
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="amenities" value="safe">
-                                <span class="checkmark"></span>
-                                Safe
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="description">Room Description</label>
-                        <textarea id="description" placeholder="Describe the room features and view..." rows="4"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="roomImages">Room Images</label>
-                        <div class="file-upload multiple">
-                            <input type="file" id="roomImages" accept="image/*" multiple>
-                            <label for="roomImages" class="upload-btn">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                Choose Files
-                            </label>
-                            <span class="file-name">No files chosen</span>
-                        </div>
-                        <small class="help-text">You can select multiple images</small>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-secondary">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Create Room</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

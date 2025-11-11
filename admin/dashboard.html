@@ -9,37 +9,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+    
     <div class="admin-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <h2>Apex Stay</h2>
                 <p>Admin Panel</p>
+                <button class="sidebar-close" type="button" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <ul class="nav-links">
-                <li class="active"><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="users-show.html"><i class="fas fa-users"></i> Users</a></li>
-                <li><a href="manager-create.html"><i class="fas fa-user-plus"></i> Create Manager</a></li>
-                <li><a href="manager-show.html"><i class="fas fa-user-tie"></i> Managers</a></li>
-                <li><a href="staff-create.html"><i class="fas fa-user-plus"></i> Create Staff</a></li>
-                <li><a href="staff-show.html"><i class="fas fa-user-check"></i> Staff</a></li>
-                <li><a href="feedback-show.html"><i class="fas fa-comments"></i> Feedback</a></li>
-                <li><a href="rooms-create.html"><i class="fas fa-plus-circle"></i> Create Room</a></li>
-                <li><a href="rooms-show.html"><i class="fas fa-bed"></i> Rooms</a></li>
-                <li><a href="tables-create.html"><i class="fas fa-plus-square"></i> Create Table</a></li>
-                <li><a href="tables-show.html"><i class="fas fa-table"></i> Tables</a></li>
-                <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
-                <li class="logout"><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li class="active"><a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="users-show.html">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a></li>
+                <li><a href="manager-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Manager</span>
+                </a></li>
+                <li><a href="manager-show.html">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Managers</span>
+                </a></li>
+                <li><a href="staff-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Staff</span>
+                </a></li>
+                <li><a href="staff-show.html">
+                    <i class="fas fa-user-check"></i>
+                    <span>Staff</span>
+                </a></li>
+                <li><a href="feedback-show.html">
+                    <i class="fas fa-comments"></i>
+                    <span>Feedback</span>
+                </a></li>
+                <li><a href="rooms-create.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Room</span>
+                </a></li>
+                <li><a href="rooms-show.html">
+                    <i class="fas fa-bed"></i>
+                    <span>Rooms</span>
+                </a></li>
+                <li><a href="tables-create.html">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create Table</span>
+                </a></li>
+                <li><a href="tables-show.html">
+                    <i class="fas fa-table"></i>
+                    <span>Tables</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="logout"><a href="../index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a></li>
             </ul>
         </div>
 
         <!-- Main Content -->
         <div class="main-content">
-            <!-- Header -->
+            <!-- Header / Navigation Bar -->
             <div class="header">
-                <div class="header-title">
-                    <h1>Dashboard</h1>
-                    <p>Welcome to Apex Stay Admin Panel</p>
+                <div class="header-left">
+                    <!-- Hamburger Menu Button (Three Lines) -->
+                    <button class="hamburger-btn" type="button" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-title">
+                        <h1>Dashboard</h1>
+                        <p>Welcome to Apex Stay Admin Panel</p>
+                    </div>
                 </div>
                 <div class="header-actions">
                     <div class="search-box">
@@ -51,12 +102,11 @@
                         <span class="badge">3</span>
                     </div>
                     <div class="user-profile">
-                        <img src="https://ui-avatars.com/api/?name=Admin&background=0ea5e9&color=fff" alt="Admin">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=0a1a4a&color=fff" alt="Admin">
                         <span>Admin</span>
                     </div>
                 </div>
             </div>
-
             <!-- Stats Cards -->
             <div class="stats-cards">
                 <div class="stat-card revenue">
