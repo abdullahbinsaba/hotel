@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Apex Stay Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Apex Stay</h2>
+                <p>Admin Panel</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="users-show.html"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="manager-create.html"><i class="fas fa-user-plus"></i> Create Manager</a></li>
+                <li><a href="manager-show.html"><i class="fas fa-user-tie"></i> Managers</a></li>
+                <li><a href="staff-create.html"><i class="fas fa-user-plus"></i> Create Staff</a></li>
+                <li><a href="staff-show.html"><i class="fas fa-user-check"></i> Staff</a></li>
+                <li><a href="feedback-show.html"><i class="fas fa-comments"></i> Feedback</a></li>
+                <li><a href="rooms-create.html"><i class="fas fa-plus-circle"></i> Create Room</a></li>
+                <li><a href="rooms-show.html"><i class="fas fa-bed"></i> Rooms</a></li>
+                <li><a href="tables-create.html"><i class="fas fa-plus-square"></i> Create Table</a></li>
+                <li><a href="tables-show.html"><i class="fas fa-table"></i> Tables</a></li>
+                <li class="active"><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                <li class="logout"><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <div class="header-title">
+                    <h1>My Profile</h1>
+                    <p>Manage your account settings</p>
+                </div>
+                <div class="header-actions">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=0a1a4a&color=fff" alt="Admin">
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=0a1a4a&color=fff&size=120" alt="Admin User">
+                            <button class="edit-avatar-btn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Admin User</h2>
+                            <p>System Administrator</p>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <strong>2</strong>
+                                    <span>Years</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>1,245</strong>
+                                    <span>Actions</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>98%</strong>
+                                    <span>Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                        <button class="tab-btn" data-tab="security">Security</button>
+                        <button class="tab-btn" data-tab="preferences">Preferences</button>
+                    </div>
+
+                    <div class="tab-content active" id="personal-tab">
+                        <form class="form-container">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" value="Admin" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" value="User" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="admin@apexstay.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" value="+1 234 567 8900" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea id="address" rows="3">123 Hotel Street, City, State 12345</textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <input type="text" id="department" value="Administration" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">Role</label>
+                                    <input type="text" id="role" value="System Administrator" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-content" id="security-tab">
+                        <form class="form-container">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" placeholder="Enter current password" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" placeholder="Enter new password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmNewPassword">Confirm New Password</label>
+                                    <input type="password" id="confirmNewPassword" placeholder="Confirm new password" required>
+                                </div>
+                            </div>
+
+                            <div class="password-strength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="strength-text">Strong</span>
+                            </div>
+
+                            <div class="security-features">
+                                <h4>Security Features</h4>
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Two-Factor Authentication
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Login Notifications
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Require PIN for sensitive actions
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-content" id="preferences-tab">
+                        <form class="form-container">
+                            <div class="form-group">
+                                <label for="language">Language</label>
+                                <select id="language">
+                                    <option value="en" selected>English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="fr">French</option>
+                                    <option value="de">German</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="timezone">Timezone</label>
+                                <select id="timezone">
+                                    <option value="est" selected>Eastern Time (ET)</option>
+                                    <option value="cst">Central Time (CT)</option>
+                                    <option value="mst">Mountain Time (MT)</option>
+                                    <option value="pst">Pacific Time (PT)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateFormat">Date Format</label>
+                                <select id="dateFormat">
+                                    <option value="mm/dd/yyyy" selected>MM/DD/YYYY</option>
+                                    <option value="dd/mm/yyyy">DD/MM/YYYY</option>
+                                    <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                                </select>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <h4>Notification Preferences</h4>
+                                <label class="checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Email Notifications
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Push Notifications
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    SMS Notifications
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/admin/script.js"></script>
+</body>
+</html>
