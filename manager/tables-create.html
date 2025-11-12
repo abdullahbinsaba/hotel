@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table - Apex Stay Manager</title>
+    <link rel="stylesheet" href="../assets/css/admin/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+    
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Apex Stay</h2>
+                <p>Manager Panel</p>
+                <button class="sidebar-close" type="button" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="users-show.html">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a></li>
+                <li><a href="staff-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Staff</span>
+                </a></li>
+                <li><a href="staff-show.html">
+                    <i class="fas fa-user-check"></i>
+                    <span>Staff</span>
+                </a></li>
+                <li><a href="rooms-create.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Room</span>
+                </a></li>
+                <li><a href="rooms-show.html">
+                    <i class="fas fa-bed"></i>
+                    <span>Rooms</span>
+                </a></li>
+                <li><a href="tables-create.html">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create Table</span>
+                </a></li>
+                <li><a href="tables-show.html">
+                    <i class="fas fa-table"></i>
+                    <span>Tables</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="logout"><a href="../index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header / Navigation Bar -->
+            <div class="header">
+                <div class="header-left">
+                    <!-- Hamburger Menu Button (Three Lines) -->
+                    <button class="hamburger-btn" type="button" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-title">
+                        <h1>Dashboard</h1>
+                        <p>Welcome to Apex Stay Manage Panel</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=0a1a4a&color=fff" alt="Admin">
+                        <span>Manager</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2>Table Information</h2>
+                        <p>Fill in the details to create a new restaurant table</p>
+                    </div>
+                    <form class="form-container">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tableNumber">Table Number *</label>
+                                <input type="text" id="tableNumber" placeholder="e.g., T01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tableCapacity">Capacity *</label>
+                                <select id="tableCapacity" required>
+                                    <option value="">Select Capacity</option>
+                                    <option value="2">2 Persons</option>
+                                    <option value="4">4 Persons</option>
+                                    <option value="6">6 Persons</option>
+                                    <option value="8">8 Persons</option>
+                                    <option value="10">10+ Persons</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tableType">Table Type *</label>
+                                <select id="tableType" required>
+                                    <option value="">Select Table Type</option>
+                                    <option value="indoor">Indoor</option>
+                                    <option value="outdoor">Outdoor</option>
+                                    <option value="private">Private Room</option>
+                                    <option value="bar">Bar Counter</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tableLocation">Location *</label>
+                                <select id="tableLocation" required>
+                                    <option value="">Select Location</option>
+                                    <option value="main-hall">Main Hall</option>
+                                    <option value="terrace">Terrace</option>
+                                    <option value="garden">Garden</option>
+                                    <option value="poolside">Poolside</option>
+                                    <option value="private-room-1">Private Room 1</option>
+                                    <option value="private-room-2">Private Room 2</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tableDescription">Description</label>
+                            <textarea id="tableDescription" placeholder="Describe table features or special characteristics..." rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Special Features</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="features" value="window-view">
+                                    <span class="checkmark"></span>
+                                    Window View
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="features" value="garden-view">
+                                    <span class="checkmark"></span>
+                                    Garden View
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="features" value="pool-view">
+                                    <span class="checkmark"></span>
+                                    Pool View
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="features" value="private">
+                                    <span class="checkmark"></span>
+                                    Private Area
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="features" value="wheelchair">
+                                    <span class="checkmark"></span>
+                                    Wheelchair Accessible
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="minimumSpend">Minimum Spend ($)</label>
+                            <input type="number" id="minimumSpend" placeholder="Enter minimum spend amount">
+                            <small class="help-text">Leave empty if no minimum spend required</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Create Table</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/admin/script.js"></script>
+</body>
+</html>

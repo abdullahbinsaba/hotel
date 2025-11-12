@@ -3,231 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Stay - Admin Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../assets/css/manager/style.css">
-    <link rel="stylesheet" href="../assets/css/manager/responsive.css">
+    <title>Dashboard - Apex Stay Manager</title>
+    <link rel="stylesheet" href="../assets/css/admin/style.css">
+    <link rel="stylesheet" href="../assets/css/admin/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="dashboard-container">
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+    
+    <div class="admin-container">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <div class="sidebar">
             <div class="logo">
                 <h2>Apex Stay</h2>
-                <p>Admin Panel</p>
+                <p>Manager Panel</p>
+                <button class="sidebar-close" type="button" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <nav class="sidebar-nav">
-                <ul>
-                    <li><a href="#dashboard" class="nav-link active" data-page="dashboard">Dashboard</a></li>
-                    <li><a href="#users" class="nav-link" data-page="users">Users</a></li>
-                    <li><a href="#staff" class="nav-link" data-page="staff">Staff</a></li>
-                    <li><a href="#feedback" class="nav-link" data-page="feedback">Feedback</a></li>
-                    <li><a href="#rooms" class="nav-link" data-page="rooms">Rooms</a></li>
-                    <li><a href="#tables" class="nav-link" data-page="tables">Tables</a></li>
-                    <li><a href="#profile" class="nav-link" data-page="profile">Profile</a></li>
-                </ul>
-            </nav>
-        </aside>
+            <ul class="nav-links">
+                <li class="active"><a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="users-show.html">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a></li>
+                <li><a href="staff-create.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Staff</span>
+                </a></li>
+                <li><a href="staff-show.html">
+                    <i class="fas fa-user-check"></i>
+                    <span>Staff</span>
+                </a></li>
+                <li><a href="rooms-create.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Room</span>
+                </a></li>
+                <li><a href="rooms-show.html">
+                    <i class="fas fa-bed"></i>
+                    <span>Rooms</span>
+                </a></li>
+                <li><a href="tables-create.html">
+                    <i class="fas fa-plus-square"></i>
+                    <span>Create Table</span>
+                </a></li>
+                <li><a href="tables-show.html">
+                    <i class="fas fa-table"></i>
+                    <span>Tables</span>
+                </a></li>
+                <li><a href="profile.html">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="logout"><a href="../index.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a></li>
+            </ul>
+        </div>
 
         <!-- Main Content -->
-        <main class="main-content">
-            <!-- Header -->
-            <header class="header">
+        <div class="main-content">
+            <!-- Header / Navigation Bar -->
+            <div class="header">
                 <div class="header-left">
-                    <button class="menu-toggle">☰</button>
-                    <h1 id="page-title">Dashboard</h1>
-                </div>
-                <div class="header-right">
-                    <div class="user-info">
-                        <span>Admin User</span>
-                        <div class="user-avatar">AU</div>
+                    <!-- Hamburger Menu Button (Three Lines) -->
+                    <button class="hamburger-btn" type="button" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-title">
+                        <h1>Dashboard</h1>
+                        <p>Welcome to Apex Stay Manage Panel</p>
                     </div>
                 </div>
-            </header>
-
-            <!-- Page Content -->
-            <div class="page-content">
-                <!-- Dashboard Page -->
-                <section id="dashboard" class="page active">
-                    <div class="stats-cards">
-                        <div class="stat-card">
-                            <h3>Total Bookings</h3>
-                            <p class="stat-number">1,248</p>
-                            <span class="stat-change positive">+12%</span>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Revenue</h3>
-                            <p class="stat-number">$84,560</p>
-                            <span class="stat-change positive">+8%</span>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Occupancy Rate</h3>
-                            <p class="stat-number">78%</p>
-                            <span class="stat-change negative">-3%</span>
-                        </div>
-                        <div class="stat-card">
-                            <h3>Pending Check-ins</h3>
-                            <p class="stat-number">24</p>
-                            <span class="stat-change positive">+5%</span>
-                        </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
                     </div>
-
-                    <div class="charts-container">
-                        <div class="chart-card">
-                            <h3>Booking Trends</h3>
-                            <div class="chart-placeholder">
-                                <canvas id="bookingChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="chart-card">
-                            <h3>Revenue by Room Type</h3>
-                            <div class="chart-placeholder">
-                                <canvas id="revenueChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="chart-card">
-                            <h3>Occupancy Rate</h3>
-                            <div class="chart-placeholder">
-                                <canvas id="occupancyChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="chart-card">
-                            <h3>Payment Methods</h3>
-                            <div class="chart-placeholder">
-                                <canvas id="paymentChart"></canvas>
-                            </div>
-                        </div>
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
                     </div>
-                </section>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=0a1a4a&color=fff" alt="Admin">
+                        <span>Manager</span>
+                    </div>
+                </div>
             </div>
-        </main>
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="stat-card revenue">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>$24,560</h3>
+                        <p>Total Revenue</p>
+                    </div>
+                </div>
+                <div class="stat-card bookings">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>128</h3>
+                        <p>Total Bookings</p>
+                    </div>
+                </div>
+                <div class="stat-card occupancy">
+                    <div class="stat-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>78%</h3>
+                        <p>Occupancy Rate</p>
+                    </div>
+                </div>
+                <div class="stat-card guests">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>342</h3>
+                        <p>Total Guests</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-card large">
+                    <div class="chart-header">
+                        <h3>Revenue Overview</h3>
+                        <select class="chart-filter">
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 3 Months</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Booking Statistics</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="bookingChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Room Type Distribution</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="roomChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <div class="activity-card">
+                    <div class="card-header">
+                        <h3>Recent Bookings</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <h4>John Smith</h4>
+                                <p>Deluxe Room • 2 Nights • $298</p>
+                            </div>
+                            <div class="activity-meta">
+                                <span class="status active">Confirmed</span>
+                                <span class="date">Today, 10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Executive Suite • 3 Nights • $747</p>
+                            </div>
+                            <div class="activity-meta">
+                                <span class="status on-leave">Pending</span>
+                                <span class="date">Today, 09:15 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-info">
+                                <h4>Michael Brown</h4>
+                                <p>Standard Room • 1 Night • $99</p>
+                            </div>
+                            <div class="activity-meta">
+                                <span class="status inactive">Completed</span>
+                                <span class="date">Yesterday, 05:20 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/admin/script.js"></script>
     <script>
-        // Initialize charts when page loads
+        // Sample Chart Data
         document.addEventListener('DOMContentLoaded', function() {
-            // Booking Trends Chart (Line Chart)
-            const bookingCtx = document.getElementById('bookingChart').getContext('2d');
-            const bookingChart = new Chart(bookingCtx, {
+            // Revenue Chart
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            new Chart(revenueCtx, {
                 type: 'line',
                 data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
                     datasets: [{
-                        label: 'Bookings',
-                        data: [65, 59, 80, 81, 56, 55, 70, 75, 82, 78, 85, 90],
-                        borderColor: '#3498db',
-                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
-                        tension: 0.4,
-                        fill: true
+                        label: 'Revenue',
+                        data: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
+                        borderColor: '#0ea5e9',
+                        backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
                     }]
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     plugins: {
                         legend: {
                             display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#94a3b8'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#94a3b8'
+                            }
                         }
                     }
                 }
             });
 
-            // Revenue by Room Type Chart (Bar Chart)
-            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
-            const revenueChart = new Chart(revenueCtx, {
+            // Booking Chart
+            const bookingCtx = document.getElementById('bookingChart').getContext('2d');
+            new Chart(bookingCtx, {
                 type: 'bar',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Bookings',
+                        data: [12, 19, 8, 15, 22, 18, 25],
+                        backgroundColor: [
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(139, 92, 246, 0.8)',
+                            'rgba(14, 165, 233, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(16, 185, 129, 0.8)'
+                        ],
+                        borderColor: 'rgba(255, 255, 255, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#94a3b8'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#94a3b8'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Room Distribution Chart
+            const roomCtx = document.getElementById('roomChart').getContext('2d');
+            new Chart(roomCtx, {
+                type: 'doughnut',
                 data: {
                     labels: ['Standard', 'Deluxe', 'Executive'],
                     datasets: [{
-                        label: 'Revenue ($)',
-                        data: [32000, 45000, 28000],
+                        data: [35, 40, 25],
                         backgroundColor: [
-                            'rgba(52, 152, 219, 0.7)',
-                            'rgba(46, 204, 113, 0.7)',
-                            'rgba(155, 89, 182, 0.7)'
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(245, 158, 11, 0.8)'
                         ],
-                        borderColor: [
-                            '#3498db',
-                            '#2ecc71',
-                            '#9b59b6'
-                        ],
-                        borderWidth: 1
+                        borderColor: 'rgba(255, 255, 255, 0.2)',
+                        borderWidth: 2
                     }]
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     plugins: {
                         legend: {
-                            display: false
-                        }
-                    }
-                }
-            });
-
-            // Occupancy Rate Chart (Doughnut Chart)
-            const occupancyCtx = document.getElementById('occupancyChart').getContext('2d');
-            const occupancyChart = new Chart(occupancyCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Occupied', 'Available', 'Maintenance'],
-                    datasets: [{
-                        data: [65, 30, 5],
-                        backgroundColor: [
-                            'rgba(52, 152, 219, 0.7)',
-                            'rgba(46, 204, 113, 0.7)',
-                            'rgba(243, 156, 18, 0.7)'
-                        ],
-                        borderColor: [
-                            '#3498db',
-                            '#2ecc71',
-                            '#f39c12'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }
-            });
-
-            // Payment Methods Chart (Pie Chart)
-            const paymentCtx = document.getElementById('paymentChart').getContext('2d');
-            const paymentChart = new Chart(paymentCtx, {
-                type: 'pie',
-                data: {
-                    labels: ['Credit Card', 'Debit Card', 'PayPal', 'Cash'],
-                    datasets: [{
-                        data: [45, 25, 20, 10],
-                        backgroundColor: [
-                            'rgba(52, 152, 219, 0.7)',
-                            'rgba(46, 204, 113, 0.7)',
-                            'rgba(155, 89, 182, 0.7)',
-                            'rgba(243, 156, 18, 0.7)'
-                        ],
-                        borderColor: [
-                            '#3498db',
-                            '#2ecc71',
-                            '#9b59b6',
-                            '#f39c12'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
+                            position: 'bottom',
+                            labels: {
+                                color: '#94a3b8',
+                                padding: 20
+                            }
                         }
                     }
                 }
             });
         });
     </script>
-    <script src="../assets/js/manager/script.js"></script>
 </body>
 </html>
